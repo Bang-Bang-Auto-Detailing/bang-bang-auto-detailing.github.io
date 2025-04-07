@@ -16,58 +16,6 @@ permalink: /rvs-detailing/
   <link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/d9511e89/site_favicon_16_1738719270240.ico" />
   <!-- End favorite icons -->
   <link rel="preconnect" href="https://lirp.cdn-website.com/" />
-  <!-- render the required CSS and JS in the head section -->
-  <script id='d-js-dmapi'>
-    window.SystemID = 'US_DIRECT_PRODUCTION';
-    if (!window.dmAPI) {
-      window.dmAPI = {
-        registerExternalRuntimeComponent: function () {
-        },
-        getCurrentDeviceType: function () {
-          return window._currentDevice;
-        },
-        runOnReady: (ns, fn) => {
-          const safeFn = dmAPI.toSafeFn(fn);
-          ns = ns || 'global_' + Math.random().toString(36).slice(2, 11);
-          const eventName = 'afterAjax.' + ns;
-          if (document.readyState === 'complete') {
-            $.DM.events.off(eventName).on(eventName, safeFn);
-            setTimeout(function () {
-              safeFn({
-                isAjax: false,
-              });
-            }, 0);
-          } else {
-            window?.waitForDeferred?.('dmAjax', () => {
-              $.DM.events.off(eventName).on(eventName, safeFn);
-              safeFn({
-                isAjax: false,
-              });
-            });
-          }
-        },
-        toSafeFn: (fn) => {
-          if (fn?.safe) {
-            return fn;
-          }
-          const safeFn = function (...args) {
-            try {
-              return fn?.apply(null, args);
-            } catch (e) {
-              console.log('function failed ' + e.message);
-            }
-          };
-          safeFn.safe = true;
-          return safeFn;
-        }
-      };
-    }
-    if (!window.requestIdleCallback) {
-      window.requestIdleCallback = function (fn) {
-        setTimeout(fn, 0);
-      }
-    }
-  </script>
   <!-- loadCSS function header.jsp-->
   <script id="d-js-load-css">
     /**

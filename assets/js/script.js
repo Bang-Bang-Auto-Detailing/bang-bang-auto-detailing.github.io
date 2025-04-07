@@ -75,3 +75,53 @@ function toHash(str) {
     }
   }
 })(window);
+
+window.SystemID = 'US_DIRECT_PRODUCTION';
+if (!window.dmAPI) {
+  window.dmAPI = {
+    registerExternalRuntimeComponent: function () {
+    },
+    getCurrentDeviceType: function () {
+      return window._currentDevice;
+    },
+    runOnReady: (ns, fn) => {
+      const safeFn = dmAPI.toSafeFn(fn);
+      ns = ns || 'global_' + Math.random().toString(36).slice(2, 11);
+      const eventName = 'afterAjax.' + ns;
+      if (document.readyState === 'complete') {
+        $.DM.events.off(eventName).on(eventName, safeFn);
+        setTimeout(function () {
+          safeFn({
+            isAjax: false,
+          });
+        }, 0);
+      } else {
+        window?.waitForDeferred?.('dmAjax', () => {
+          $.DM.events.off(eventName).on(eventName, safeFn);
+          safeFn({
+            isAjax: false,
+          });
+        });
+      }
+    },
+    toSafeFn: (fn) => {
+      if (fn?.safe) {
+        return fn;
+      }
+      const safeFn = function (...args) {
+        try {
+          return fn?.apply(null, args);
+        } catch (e) {
+          console.log('function failed ' + e.message);
+        }
+      };
+      safeFn.safe = true;
+      return safeFn;
+    }
+  };
+}
+if (!window.requestIdleCallback) {
+  window.requestIdleCallback = function (fn) {
+    setTimeout(fn, 0);
+  }
+}
