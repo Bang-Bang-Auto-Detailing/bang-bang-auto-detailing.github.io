@@ -216,3 +216,24 @@ if (!window.requestIdleCallback) {
   }
   window.loadCSS = window.loadCSS || loadCSS;
 })();
+
+/* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+function Def() {
+  this.promise = new Promise((function (a, b) {
+    this.resolve = a, this.reject = b
+  }).bind(this))
+}
+const defs = {};
+window.getDeferred = function (a) {
+  return null == defs[a] && (defs[a] = new Def), defs[a]
+}
+window.waitForDeferred = function (b, a, c) {
+  let d = window?.getDeferred?.(b);
+  d
+    ? d.promise.then(a)
+    : c && ["complete", "interactive"].includes(document.readyState)
+      ? setTimeout(a, 1)
+      : c
+        ? document.addEventListener("DOMContentLoaded", a)
+        : console.error(`Deferred  does not exist`);
+};
