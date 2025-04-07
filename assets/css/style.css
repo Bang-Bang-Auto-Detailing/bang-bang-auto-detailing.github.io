@@ -1,0 +1,87 @@
+/* This file is auto-generated from a `scss` file with the same name */
+.videobgwrapper {
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: inherit
+}
+
+.videobgframe {
+  position: absolute;
+  width: 101%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  object-fit: fill
+}
+
+#dm video.videobgframe {
+  margin: 0
+}
+
+@media (max-width:767px) {
+  .dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+    min-height: 80vh
+  }
+}
+
+@media (min-width:1025px) {
+  .dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+    min-height: 45vh
+  }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+    min-height: 45vh
+  }
+}
+
+#dm [data-show-on-page-only] {
+  display: none !important
+}
+
+#dmRoot div.stickyHeaderFix div.site_content {
+  margin-top: 0 !important
+}
+
+#dmRoot div.stickyHeaderFix div.hamburger-header-container {
+  position: relative
+}
+
+:root {
+  --color_1: rgba(45, 46, 50, 1);
+  --color_2: rgba(229, 229, 229, 1);
+  --color_3: rgba(255, 255, 255, 1);
+  --color_4: rgba(255, 255, 255, 1);
+  --color_5: rgba(3, 38, 33, 1);
+  --color_6: rgba(224, 24, 130, 1);
+  --color_7: rgba(107, 190, 74, 1);
+  --color_8: rgba(0, 0, 0, 0);
+}
+
+/** Support `img` size attributes */
+img[width][height] {
+  height: auto;
+}
+
+/** Support showing sticky element on page only */
+body[data-page-alias="ceramic-coating"] #dm [data-show-on-page-only="ceramic-coating"],
+body[data-page-alias="boats-detailing"] #dm [data-show-on-page-only="boats-detailing"],
+body[data-page-alias="full-exterior-and-interior-detail"] #dm [data-show-on-page-only="full-exterior-and-interior-detail"],
+body[data-page-alias="services"] #dm [data-show-on-page-only="services"],
+body[data-page-alias="paint-and-trim-restoration"] #dm [data-show-on-page-only="paint-and-trim-restoration"],
+body[data-page-alias="rvs-detailing"] #dm [data-show-on-page-only="rvs-detailing"],
+body[data-page-alias="vinyl-removal"] #dm [data-show-on-page-only="vinyl-removal"],
+body[data-page-alias="about-us"] #dm [data-show-on-page-only="about-us"],
+body[data-page-alias="contact-us"] #dm [data-show-on-page-only="contact-us"],
+body[data-page-alias="home"] #dm [data-show-on-page-only="home"],
+body[data-page-alias="see-our-work"] #dm [data-show-on-page-only="see-our-work"] {
+  display: block !important;
+}
