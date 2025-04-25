@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Raleway Fallback";
+  src: local('Arial');
+  ascent-override: 89.616%;
+  descent-override: 22.3087%;
+  size-adjust: 104.892%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Poppins Fallback";
+  src: local('Arial');
+  ascent-override: 92.326%;
+  descent-override: 30.7753%;
+  line-gap-override: 8.793%;
+  size-adjust: 113.7274%;
+}
+
+@font-face {
+  font-family: "Quicksand Fallback";
+  src: local('Arial');
+  ascent-override: 94.9261%;
+  descent-override: 23.7315%;
+  size-adjust: 105.3451%;
+  line-gap-override: 0%;
+}
