@@ -1,3 +1,180 @@
+@media (min-width: 1025px) {
+  [data-version] .size-16,
+  [data-version] .font-size-16 {
+    font-size: 16px !important;
+  }
+
+  [data-version] .size-18,
+  [data-version] .font-size-18 {
+    font-size: 18px !important;
+  }
+
+  [data-version] .size-20,
+  [data-version] .font-size-20 {
+    font-size: 20px !important;
+  }
+
+  [data-version] .size-22,
+  [data-version] .font-size-22 {
+    font-size: 22px !important;
+  }
+
+  [data-version] .size-24,
+  [data-version] .font-size-24 {
+    font-size: 24px !important;
+  }
+
+  [data-version] .size-27,
+  [data-version] .font-size-27 {
+    font-size: 27px !important;
+  }
+
+  [data-version] .size-35,
+  [data-version] .font-size-35 {
+    font-size: 35px !important;
+  }
+
+  [data-version] .size-42,
+  [data-version] .font-size-42 {
+    font-size: 42px !important;
+  }
+
+  [data-version] .size-48,
+  [data-version] .font-size-48 {
+    font-size: 48px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  [data-version] .t-size-16,
+  [data-version] .t-font-size-16 {
+    font-size: 16px !important;
+  }
+
+  [data-version] .t-size-17,
+  [data-version] .t-font-size-17 {
+    font-size: 17px !important;
+  }
+
+  [data-version] .t-size-18,
+  [data-version] .t-font-size-18 {
+    font-size: 18px !important;
+  }
+
+  [data-version] .t-size-19,
+  [data-version] .t-font-size-19 {
+    font-size: 19px !important;
+  }
+
+  [data-version] .t-size-20,
+  [data-version] .t-font-size-20 {
+    font-size: 20px !important;
+  }
+
+  [data-version] .t-size-23,
+  [data-version] .t-font-size-23 {
+    font-size: 23px !important;
+  }
+
+  [data-version] .t-size-25,
+  [data-version] .t-font-size-25 {
+    font-size: 25px !important;
+  }
+
+  [data-version] .t-size-36,
+  [data-version] .t-font-size-36 {
+    font-size: 36px !important;
+  }
+
+  [data-version] .t-size-41,
+  [data-version] .t-font-size-41 {
+    font-size: 41px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  [data-version] .m-size-14,
+  [data-version] .m-font-size-14 {
+    font-size: 14px !important;
+  }
+
+  [data-version] .m-size-16,
+  [data-version] .m-font-size-16 {
+    font-size: 16px !important;
+  }
+
+  [data-version] .m-size-18,
+  [data-version] .m-font-size-18 {
+    font-size: 18px !important;
+  }
+
+  [data-version] .m-size-19,
+  [data-version] .m-font-size-19 {
+    font-size: 19px !important;
+  }
+
+  [data-version] .m-size-22,
+  [data-version] .m-font-size-22 {
+    font-size: 22px !important;
+  }
+
+  [data-version] .m-size-28,
+  [data-version] .m-font-size-28 {
+    font-size: 28px !important;
+  }
+
+  [data-version] .m-size-34,
+  [data-version] .m-font-size-34 {
+    font-size: 34px !important;
+  }
+
+  [data-version] .m-size-38,
+  [data-version] .m-font-size-38 {
+    font-size: 38px !important;
+  }
+}
+
+.dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']),
+.dmDesktopBody:not(.editGrid) [data-anim-extended] {
+  visibility: hidden;
+}
+
+.dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']),
+.dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+  visibility: hidden !important;
+}
+
+#dmRoot:not(.editGrid) .flex-element [data-anim-extended] {
+  visibility: hidden;
+}
+
+@font-face {
+  font-family: FontAwesome;
+  font-display: block;
+  src: url(https://static.cdn-website.com/fonts/fontawesome-webfont.eot?v=6);
+  src: url(https://static.cdn-website.com/fonts/fontawesome-webfont.eot?#iefix&v=6) format("embedded-opentype"), url(https://static.cdn-website.com/fonts/fontawesome-webfont.woff?v=6) format("woff"), url(https://static.cdn-website.com/fonts/fontawesome-webfont.ttf?v=6) format("truetype"), url(https://static.cdn-website.com/fonts/fontawesome-webfont.svg#fontawesomeregular?v=6) format("svg");
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://irp.cdn-website.com/fonts/s/raleway/v34/1Ptug8zYS_SKggPNyC0ITw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+}
+
+@font-face {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(https://irp.cdn-website.com/fonts/s/quicksand/v36/6xKtdSZaM9iE8KbpRA_hK1QN.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+}
+
 @font-face {
   font-family: "Raleway Fallback";
   src: local('Arial');
