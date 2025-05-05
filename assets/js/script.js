@@ -7,6 +7,21 @@ function toHash(str) {
 }
 
 (function (global) {
+  const overlay = document.getElementById('flex-popup-overlay');
+  const popup = document.getElementById('flex-runtime-popup-container');
+
+  document.getElementById('message_us').addEventListener('click', e => {
+    e.stopPropagation();
+    overlay.classList.add('show');
+    popup.classList.add('show');
+  });
+  document.getElementById('1355381865').addEventListener('click', e => {
+    e.stopPropagation();
+    overlay.classList.remove('show');
+    popup.classList.remove('show');
+    [...document.getElementById('widget_nmk').querySelectorAll("input[type=text],input[type=tel]")].map(i => i.value = '')
+  });
+
   //const cacheKey = global.cacheKey;
   const isOffline = 'onLine' in navigator && navigator.onLine === false;
   const hasServiceWorkerSupport = 'serviceWorker' in navigator;

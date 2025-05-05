@@ -85,3 +85,37 @@ body[data-page-alias="home"] #dm [data-show-on-page-only="home"],
 body[data-page-alias="see-our-work"] #dm [data-show-on-page-only="see-our-work"] {
   display: block !important;
 }
+
+#flex-popup-overlay {
+  display: none !important;
+}
+
+#flex-popup-overlay.show {
+  display: block !important;
+}
+
+#flex-runtime-popup-container {
+  display: none !important;
+}
+
+#flex-runtime-popup-container.show {
+  display: flex !important;
+}
+
+#message_us {
+  cursor: pointer;
+}
+
+#dmRoot {
+  overflow: initial !important;
+}
+
+#widget_nmk input[type="text"],
+#widget_nmk input[type="tel"] {
+  background: 0;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  border-bottom: 1px solid;
+  height: 30px;
+}
