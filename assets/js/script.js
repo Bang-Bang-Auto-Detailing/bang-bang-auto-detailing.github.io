@@ -22,6 +22,20 @@ function toHash(str) {
     [...document.getElementById('widget_nmk').querySelectorAll("input[type=text],input[type=tel]")].map(i => i.value = '')
   });
 
+  [...document.getElementById('widget_7d7').querySelectorAll('li')].map(i => i.addEventListener('click', e => {
+  //  [...e.currentTarget.parentElement.children].map(i => i.classList.remove('active'));
+  //  e.currentTarget.classList.toggle('active');
+      const vertical = e.currentTarget.querySelector('.vertical');
+      vertical.classList.toggle('eyQoqK');
+      vertical.classList.toggle('kEBKQa');
+      const horizontal = e.currentTarget.querySelector('.horizontal');
+      horizontal.classList.toggle('jxwvWq');
+      horizontal.classList.toggle('eODSZX');
+      const content = e.currentTarget.querySelector('.item-content');
+      content.classList.toggle('dygwmn');
+      content.classList.toggle('cCuScM');
+  }));
+
   //const cacheKey = global.cacheKey;
   const isOffline = 'onLine' in navigator && navigator.onLine === false;
   const hasServiceWorkerSupport = 'serviceWorker' in navigator;
