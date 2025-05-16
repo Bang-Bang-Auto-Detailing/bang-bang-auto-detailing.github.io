@@ -119,3 +119,17 @@ body[data-page-alias="see-our-work"] #dm [data-show-on-page-only="see-our-work"]
   border-bottom: 1px solid;
   height: 30px;
 }
+
+.active-menu .nav-item-text::after {
+  border-style: solid !important;
+  border-width: 2px 0px 0px 0px !important;
+  border-color: var(--color_6) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) !important;
+  opacity: 1 !important;
+  transform: unset !important;
+}
+
+ul ul .active-menu a {
+  background-color: #000;
+  color: var(--color_6) !important;
+  font-weight: bold !important;
+}

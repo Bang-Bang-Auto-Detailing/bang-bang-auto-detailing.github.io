@@ -8203,12 +8203,6 @@
         background-color: var(--color_3) !important
       }
 
-      #dm .dmInner nav.u_1697499384.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::after {
-        border-style: solid !important;
-        border-width: 2px 0 0 !important;
-        border-color: var(--color_6) transparent transparent !important
-      }
-
       #dm .dmInner a.u_1071361663 {
         box-shadow: none !important
       }
@@ -8216,11 +8210,6 @@
       #dm .dmInner nav.u_1697499384.main-navigation.unifiednav .unifiednav__container[data-depth] {
         background-color: rgba(28, 28, 30, 1) !important;
         background-image: initial !important
-      }
-
-      #dm .dmInner nav.u_1697499384.main-navigation.unifiednav .unifiednav__container[data-depth] .unifiednav__item {
-        color: rgba(255, 255, 255, 1) !important;
-        font-weight: 700 !important
       }
 
       #dm .dmInner nav.u_1697499384.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item {
@@ -19592,12 +19581,6 @@
         background-color: var(--color_3) !important
       }
 
-      #dm .dmInner nav.u_1697499384.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::after {
-        border-style: solid !important;
-        border-width: 2px 0 0 !important;
-        border-color: var(--color_6) transparent transparent !important
-      }
-
       #dm .dmInner a.u_1071361663 {
         box-shadow: none !important
       }
@@ -19605,11 +19588,6 @@
       #dm .dmInner nav.u_1697499384.main-navigation.unifiednav .unifiednav__container[data-depth] {
         background-color: rgba(28, 28, 30, 1) !important;
         background-image: initial !important
-      }
-
-      #dm .dmInner nav.u_1697499384.main-navigation.unifiednav .unifiednav__container[data-depth] .unifiednav__item {
-        color: rgba(255, 255, 255, 1) !important;
-        font-weight: 700 !important
       }
 
       #dm .dmInner nav.u_1697499384.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item {
@@ -23411,12 +23389,6 @@ img[width][height] {
     background-color: var(--color_3) !important
   }
 
-  #dm .dmInner nav.u_1697499384.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::after {
-    border-style: solid !important;
-    border-width: 2px 0 0 !important;
-    border-color: var(--color_6) transparent transparent !important
-  }
-
   #dm .dmInner a.u_1071361663 {
     box-shadow: none !important
   }
@@ -23424,11 +23396,6 @@ img[width][height] {
   #dm .dmInner nav.u_1697499384.main-navigation.unifiednav .unifiednav__container[data-depth] {
     background-color: rgba(28, 28, 30, 1) !important;
     background-image: initial !important
-  }
-
-  #dm .dmInner nav.u_1697499384.main-navigation.unifiednav .unifiednav__container[data-depth] .unifiednav__item {
-    color: rgba(255, 255, 255, 1) !important;
-    font-weight: 700 !important
   }
 
   #dm .dmInner nav.u_1697499384.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item {
