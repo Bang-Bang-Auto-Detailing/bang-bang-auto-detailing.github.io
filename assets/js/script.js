@@ -30,6 +30,25 @@ function toHash(str) {
     [...document.getElementById('widget_nmk').querySelectorAll("input[type=text],input[type=tel]")].map(i => i.value = '')
   });
 
+  const drawer = document.getElementById('hamburger-drawer');
+  const drawerIsOpen = () => drawer.hasAttribute('open');
+
+  Array.from(document.getElementsByClassName('hamburgerButton')).map(e => e.addEventListener('click', () => {
+    if (drawerIsOpen()) {
+      drawer
+        .removeAttribute('style');
+      drawer
+        .removeAttribute('open');
+    }
+    else {
+      drawer
+        .setAttribute('style', 'height: calc(100% + 0px)');
+      drawer
+        .setAttribute('open', '');
+    }
+  }));
+
+
   const accordion = document.getElementById('widget_7d7');
 
   if (accordion) {
