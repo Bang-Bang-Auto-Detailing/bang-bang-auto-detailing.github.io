@@ -64,6 +64,24 @@ function toHash(str) {
         content.classList.toggle('cCuScM');
     }));
   }
+
+  const accordion_sub  = document.getElementById('9978dd62');
+
+  if (accordion_sub) {
+    const accordion_sub_li = [...accordion_sub.querySelectorAll('li')];
+    accordion_sub_li.map(i => i.addEventListener('click', e => {
+        const allSiblings = accordion_sub_li.filter(sibling => sibling !== e.currentTarget);
+        allSiblings.map(s => {
+          const item = s.querySelector('.accordion-item');
+          item.classList.remove('kbVQzr');
+          item.classList.add('dygwmn');
+        });
+
+        const items = e.currentTarget.querySelector('.accordion-item');
+        items.classList.toggle('dygwmn');
+        items.classList.toggle('kbVQzr');
+    }));
+  }
 })(window);
 
 window.SystemID = 'US_DIRECT_PRODUCTION';
