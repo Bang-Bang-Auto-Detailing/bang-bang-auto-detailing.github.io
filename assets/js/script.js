@@ -82,6 +82,22 @@ function toHash(str) {
         items.classList.toggle('kbVQzr');
     }));
   }
+
+  const map = new mapboxgl.Map({
+    accessToken: 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw',
+    container: '64eb8308',
+    style: 'mapbox://styles/mapbox/streets-v12',
+    center: [-81.379039, 28.54211],
+    zoom: 13
+  });
+
+  map
+    .addControl(new mapboxgl.FullscreenControl())
+    .addControl(new mapboxgl.NavigationControl());
+
+  new mapboxgl.Marker()
+    .setLngLat([-81.379039, 28.54211])
+    .addTo(map);
 })(window);
 
 window.SystemID = 'US_DIRECT_PRODUCTION';
