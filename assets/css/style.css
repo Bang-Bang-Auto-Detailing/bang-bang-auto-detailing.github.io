@@ -139,3 +139,16 @@ ul ul .active-menu a {
   outline: 2px solid var(--color_6);
   outline-offset: 2px;
 }
+
+/* Fix homepage hero text cutoff between 1024px and 1500px */
+@media (min-width: 1025px) and (max-width: 1500px) {
+  /* Widen text column, reduce left padding */
+  #\36 3bd85219866cc3622781521 {
+    width: 58% !important;
+    padding-left: 5% !important;
+  }
+  /* Narrow image column to compensate */
+  #\36 3bd85219866cc3622781522 {
+    width: 40% !important;
+  }
+}
