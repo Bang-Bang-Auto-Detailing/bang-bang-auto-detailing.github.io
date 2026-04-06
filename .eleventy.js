@@ -4,6 +4,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     'assets': 'assets',
   });
+  eleventyConfig.ignores.add('.kiro/**');
+  eleventyConfig.ignores.add('CLAUDE.md');
   eleventyConfig.addGlobalData('site_title', 'Bang Bang Auto Detailing');
   eleventyConfig.addGlobalData('email', 'bangbangautodetailing@gmail.com');
   eleventyConfig.addGlobalData('phone', '(407) 878-9967');
