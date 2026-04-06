@@ -20,14 +20,19 @@
   <link type="text/css" rel="stylesheet" href="/assets/css/ed546b3a09337ff6f44214a612a1eb20.css" id="widgetCSS" />
   <link type="text/css" rel="stylesheet" href="/assets/css/3ae23524f151e31dcd0c91853124653d.css" id="widgetCSS" />
   <link type="text/css" rel="stylesheet" href="/assets/css/d9511e89_1.min.css" id="siteGlobalCss" />
+  {% for css in extra_css %}
+  <link rel="stylesheet" href="{{ css }}" />
+  {% endfor %}
   <meta name="google-site-verification" content="62UuktzIjpheTufmrBeShFh4p_U65mgdQq4ssYtAo24" />
-  <meta name="description" content="{{ page.description }}" />
+  <meta name="description" content="{{ description }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.bangbangautodetailing.com{{ page.url }}" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="{{ title }}" />
-  <meta name="twitter:description" content="{{ page.description }}" />
+  <meta name="twitter:description" content="{{ description }}" />
   <meta name="twitter:image" content="/assets/img/209-1920w.webp" />
   <meta property="og:title" content="{{ title }}" />
-  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:description" content="{{ description }}" />
   <meta property="og:image" content="/assets/img/209-1920w.webp" />
   <script type="application/ld+json">
     {
@@ -182,17 +187,17 @@
   </script>
 </head>
 
-<body id="dmRoot" class="dmRoot fix-mobile-scrolling flex-site dmResellerSite " style="padding:0;margin:0;" data-flex-site>
+<body id="dmRoot"{% if page_alias %} data-page-alias="{{ page_alias }}"{% endif %} class="dmRoot fix-mobile-scrolling flex-site dmResellerSite " style="padding:0;margin:0;" data-flex-site>
   <div id="dm" class='dmwr'>
     <div class="dm_wrapper -var5 null ">
-      <body dmwrapped="true" id="1084548655">
-        <div dmtemplateid="FlexHeader" data-responsive-name="FlexLayout" class="runtime-module-container dm-bfs dm-layout-sec hasAnimations hasStickyHeader inMiniHeaderMode rows-1200 hamburger-reverse dmPageBody dmDHeader" id="dm-outer-wrapper" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex">
+      <div dmwrapped="true" id="1084548655"{% if wrapper_class %} class="{{ wrapper_class }}" themewaschanged="true"{% endif %}>
+        <div dmtemplateid="FlexHeader" data-responsive-name="FlexLayout" class="runtime-module-container dm-bfs {{ body_class | default: 'dm-layout-sec' }} hasAnimations hasStickyHeader inMiniHeaderMode rows-1200 hamburger-reverse dmPageBody{% if page_class %} d-page-{{ page_class }}{% endif %} dmDHeader" id="dm-outer-wrapper"{% if page_class %} data-page-class="{{ page_class }}"{% endif %} data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex">
           <div id="dmStyle_outerContainer" class="dmOuter">
             <div id="dmStyle_innerContainer" class="dmInner">
               <div class="dmLayoutWrapper standard-var dmStandardDesktop">
                 <div id="site_content">
                   {% include "header.liquid" %}
-                  <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_dmPageNotFound">
+                  <div dmwrapped="true" id="dmFirstContainer" class="dmBody {{ content_class | default: 'u_dmStyle_template_dmPageNotFound' }}">
                     <div id="allWrapper" class="allWrapper">
                       <div id="dm_content" class="dmContent">
                         {{ content }}
@@ -206,7 +211,7 @@
             </div>
           </div>
         </div>
-      </body>
+      </div>
     </div>
   </div>
   <link rel="stylesheet" href="/assets/js/d-js-runtime-flex-package.min.js" />
