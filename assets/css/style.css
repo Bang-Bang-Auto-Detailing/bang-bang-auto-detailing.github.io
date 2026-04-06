@@ -139,3 +139,51 @@ ul ul .active-menu a {
   outline: 2px solid var(--color_6);
   outline-offset: 2px;
 }
+
+/*
+ * Homepage hero responsive fixes
+ *
+ * The H1 ("Expert Car Detailing Service in Central Florida") clips at
+ * narrower widths because the site builder exported fixed font sizes
+ * (48px desktop, 50px tablet, 35px mobile) and fixed column widths
+ * with large padding. Three problems:
+ *
+ * 1. Desktop 1024-1500px: two-column layout too narrow for 48px H1
+ * 2. Tablet 768-1024px: H1 is 50px (larger than desktop!) on a narrower screen
+ * 3. Mobile <767px: 35px can still clip on very narrow screens (320px)
+ *
+ * Fix: use clamp() for fluid H1 sizing and adjust column proportions.
+ */
+
+/* Fluid H1 across all widths — scales from 28px at 320px to 48px at 1500px */
+#dm div.dmContent #\31 285597547 h1,
+body[data-page-alias="home"] #dm div.dmContent h1 {
+  font-size: clamp(28px, 4.5vw, 48px) !important;
+}
+
+/* Desktop 1024-1500px: widen text column, reduce padding */
+@media (min-width: 1025px) and (max-width: 1500px) {
+  #\36 3bd85219866cc3622781521 {
+    width: 58% !important;
+    padding-left: 5% !important;
+  }
+  #\36 3bd85219866cc3622781522 {
+    width: 40% !important;
+  }
+}
+
+/* Tablet 768-1024px: prevent text overflow in stacked layout */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #\36 3bd85219866cc3622781521 {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+}
+
+/* Mobile: ensure text has room to breathe */
+@media (max-width: 767px) {
+  #\36 3bd85219866cc3622781521 {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
