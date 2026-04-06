@@ -133,3 +133,9 @@ ul ul .active-menu a {
   color: var(--color_6) !important;
   font-weight: bold !important;
 }
+
+/* Keyboard focus indicators (WCAG 2.4.7) */
+:focus-visible {
+  outline: 2px solid var(--color_6);
+  outline-offset: 2px;
+}
