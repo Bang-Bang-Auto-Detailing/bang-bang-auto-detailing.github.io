@@ -140,14 +140,26 @@ ul ul .active-menu a {
   outline-offset: 2px;
 }
 
-/* Fix homepage hero text cutoff between 1024px and 1500px */
+/*
+ * Homepage hero responsive fixes
+ *
+ * The site builder exported fixed H1 sizes (48px desktop, 50px tablet,
+ * 35px mobile) that clip at narrower widths. The tablet H1 is actually
+ * LARGER than desktop. Fix with fluid clamp() sizing that scales
+ * smoothly across all viewports without changing layout/padding.
+ */
+
+/* Fluid H1 — scales from 28px at 320px to 48px at 1500px+ */
+body[data-page-alias="home"] #dm div.dmContent h1 {
+  font-size: clamp(28px, 4.5vw, 48px) !important;
+}
+
+/* Desktop 1024-1500px: widen text column, reduce padding */
 @media (min-width: 1025px) and (max-width: 1500px) {
-  /* Widen text column, reduce left padding */
   #\36 3bd85219866cc3622781521 {
     width: 58% !important;
     padding-left: 5% !important;
   }
-  /* Narrow image column to compensate */
   #\36 3bd85219866cc3622781522 {
     width: 40% !important;
   }
