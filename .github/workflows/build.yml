@@ -26,6 +26,8 @@ jobs:
         run: |
           npm ci
           npm run build
+        env:
+          MAPBOX_KEY: ${{ secrets.MAPBOX_KEY }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
   deploy:
