@@ -143,10 +143,18 @@ ul ul .active-menu a {
 /*
  * Homepage hero responsive fixes
  *
- * The site builder exported fixed H1 sizes (48px desktop, 50px tablet,
- * 35px mobile) that clip at narrower widths. The tablet H1 is actually
- * LARGER than desktop. Fix with fluid clamp() sizing that scales
- * smoothly across all viewports without changing layout/padding.
+ * Two problems:
+ *
+ * 1. Fixed H1 sizes (48px/50px/35px) don't scale with viewport.
+ *    Fix: fluid clamp() sizing.
+ *
+ * 2. The text column inherits justify-content:center from the base
+ *    flex layout rule. When the H1 wraps at narrower widths, the
+ *    content overflows the column height — and centered overflow
+ *    spills equally above AND below, clipping the top of the text.
+ *    At 1024px the column collapses to min-height:0 and the text
+ *    disappears entirely. Fix: switch to flex-start so overflow
+ *    only extends downward (visible), and let the container grow.
  */
 
 /* Fluid H1 — scales from 28px at 320px to 48px at 1500px+ */
@@ -154,7 +162,13 @@ body[data-page-alias="home"] #dm div.dmContent h1 {
   font-size: clamp(28px, 4.5vw, 48px) !important;
 }
 
-/* Desktop 1024-1500px: widen text column, reduce padding */
+/* Fix flex center overflow — content must grow downward, not clip at top */
+#\36 3bd85219866cc3622781521 {
+  justify-content: flex-start !important;
+  padding-top: 40px !important;
+}
+
+/* Desktop 1024-1500px: widen text column, reduce left padding */
 @media (min-width: 1025px) and (max-width: 1500px) {
   #\36 3bd85219866cc3622781521 {
     width: 58% !important;
@@ -162,5 +176,19 @@ body[data-page-alias="home"] #dm div.dmContent h1 {
   }
   #\36 3bd85219866cc3622781522 {
     width: 40% !important;
+  }
+}
+
+/* Tablet: ensure row grows to fit stacked content */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #\36 3bd85219866cc3622781520 {
+    min-height: auto !important;
+  }
+}
+
+/* Mobile: ensure row grows to fit stacked content */
+@media (max-width: 767px) {
+  #\36 3bd85219866cc3622781520 {
+    min-height: auto !important;
   }
 }
