@@ -143,10 +143,10 @@ ul ul .active-menu a {
 /*
  * Homepage hero responsive fixes
  *
- * The site builder exported fixed H1 sizes: 48px desktop, 50px tablet,
- * 35px mobile. The tablet size is actually LARGER than desktop, and all
- * three clip at narrower widths within their breakpoint. Fix with fluid
- * clamp() sizing and padding adjustments at each breakpoint.
+ * The site builder exported fixed H1 sizes (48px desktop, 50px tablet,
+ * 35px mobile) that clip at narrower widths. The tablet H1 is actually
+ * LARGER than desktop. Fix with fluid clamp() sizing that scales
+ * smoothly across all viewports without changing layout/padding.
  */
 
 /* Fluid H1 — scales from 28px at 320px to 48px at 1500px+ */
@@ -162,21 +162,5 @@ body[data-page-alias="home"] #dm div.dmContent h1 {
   }
   #\36 3bd85219866cc3622781522 {
     width: 40% !important;
-  }
-}
-
-/* Tablet 768-1024px: reduce text column padding */
-@media (min-width: 768px) and (max-width: 1024px) {
-  #\36 3bd85219866cc3622781521 {
-    padding-left: 5% !important;
-    padding-right: 5% !important;
-  }
-}
-
-/* Mobile: normalize padding */
-@media (max-width: 767px) {
-  #\36 3bd85219866cc3622781521 {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
   }
 }
