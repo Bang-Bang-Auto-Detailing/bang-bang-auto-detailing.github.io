@@ -162,10 +162,14 @@ body[data-page-alias="home"] #dm div.dmContent h1 {
   font-size: clamp(28px, 4.5vw, 48px) !important;
 }
 
-/* Fix flex center overflow — content must grow downward, not clip at top */
+/*
+ * Fix flex center overflow — content must grow downward, not clip at top.
+ * The header is position:absolute z-index:101 at ~102px tall, so the
+ * text column needs enough top padding to clear it.
+ */
 #\36 3bd85219866cc3622781521 {
   justify-content: flex-start !important;
-  padding-top: 40px !important;
+  padding-top: 120px !important;
 }
 
 /* Desktop 1024-1500px: widen text column, reduce left padding */
