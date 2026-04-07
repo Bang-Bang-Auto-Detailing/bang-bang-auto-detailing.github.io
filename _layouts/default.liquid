@@ -223,6 +223,7 @@
   {% if uses_map %}
   <link href="https://api.mapbox.com/mapbox-gl-js/v3.13.0/mapbox-gl.css" rel="stylesheet">
   <script src="https://api.mapbox.com/mapbox-gl-js/v3.13.0/mapbox-gl.js"></script>
+  <script>window.MAPBOX_KEY = "{{ mapbox_key }}";</script>
   {% endif %}
   <script type="text/javascript" src="/assets/js/script.js"></script>
 </body>
