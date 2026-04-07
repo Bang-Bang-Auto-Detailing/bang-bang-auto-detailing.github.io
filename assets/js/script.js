@@ -7,13 +7,14 @@ function toHash(str) {
 }
 
 (function (global) {
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: '#group_vod',
-    children: 'a',
-    pswpModule: PhotoSwipe
-  });
-
-  lightbox.init();
+  if (typeof PhotoSwipeLightbox !== 'undefined' && document.getElementById('group_vod')) {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '#group_vod',
+      children: 'a',
+      pswpModule: PhotoSwipe
+    });
+    lightbox.init();
+  }
 
   const overlay = document.getElementById('flex-popup-overlay');
   const popup = document.getElementById('flex-runtime-popup-container');
@@ -83,8 +84,10 @@ function toHash(str) {
     }));
   }
 
+  if (typeof mapboxgl === 'undefined' || !document.getElementById('64eb8308')) return;
+
   const map = new mapboxgl.Map({
-    accessToken: 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw',
+    accessToken: window.MAPBOX_KEY,
     container: '64eb8308',
     style: 'mapbox://styles/mapbox/streets-v12',
     center: [-81.379039, 28.54211],
