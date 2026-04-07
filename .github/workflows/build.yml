@@ -1,7 +1,10 @@
-name: Build
+name: Build and Deploy
 on:
   push:
     branches: master
+concurrency:
+  group: pages
+  cancel-in-progress: false
 permissions:
   contents: read
   pages: write
@@ -11,21 +14,20 @@ jobs:
     name: 11ty build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Install Node
-        uses: actions/setup-node@v4
-        with: 
-          node-version: 20
+        uses: actions/configure-pages@v6
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
           cache: 'npm'
-      - name: Run gulp
+      - name: Install and build
         run: |
-          npm install
+          npm ci
           npm run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-  # Deployment job
+        uses: actions/upload-pages-artifact@v4
   deploy:
     environment:
       name: github-pages
@@ -35,4 +37,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
