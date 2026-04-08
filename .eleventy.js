@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
