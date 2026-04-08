@@ -710,9 +710,21 @@ p:last-child {
   transform: scale(1.05);
 }
 
+/* --- Section accent bar --- */
+.section--accent-bar {
+  border-top: 4px solid var(--color-green);
+}
+
+.section--bordered {
+  border-left: 4px solid var(--color-green);
+  padding-left: var(--space-xl);
+}
+
 /* --- Accordion (native <details>/<summary>) --- */
 .accordion__item {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 3px solid var(--color-green);
+  padding-left: var(--space-md);
 }
 
 .accordion__trigger {
