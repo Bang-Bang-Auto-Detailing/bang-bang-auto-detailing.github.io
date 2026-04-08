@@ -173,6 +173,45 @@ p:last-child {
   background-color: var(--color-green);
 }
 
+.section--pink {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+.section--pink h2,
+.section--pink h3,
+.section--pink h4,
+.section--pink h5 {
+  color: var(--color-white);
+}
+
+/* --- Review card --- */
+.review-card {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.review-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.review-card__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.review-card__stars {
+  color: #FFD700;
+  font-size: 1.2rem;
+  margin-bottom: var(--space-sm);
+}
+
 /* --- Grid --- */
 .grid {
   display: grid;
@@ -328,6 +367,19 @@ p:last-child {
   border-radius: var(--radius-md);
   overflow: hidden;
   transition: transform var(--transition-base);
+}
+
+.section--dark .card {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+}
+
+.section--dark .card__title {
+  color: var(--color-pink);
+}
+
+.section--dark .card__text {
+  color: var(--color-light);
 }
 
 .card:hover {
