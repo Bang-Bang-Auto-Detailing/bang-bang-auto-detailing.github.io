@@ -189,14 +189,14 @@
 <body id="dmRoot"{% if page_alias %} data-page-alias="{{ page_alias }}"{% endif %} class="dmRoot fix-mobile-scrolling flex-site dmResellerSite " style="padding:0;margin:0;" data-flex-site>
   <div id="dm" class='dmwr'>
     <div class="dm_wrapper -var5 null ">
-      <div dmwrapped="true" id="1084548655"{% if wrapper_class %} class="{{ wrapper_class }}" themewaschanged="true"{% endif %}>
+      <div id="1084548655"{% if wrapper_class %} class="{{ wrapper_class }}"{% endif %}>
         <div dmtemplateid="FlexHeader" class="runtime-module-container dm-bfs {{ body_class | default: 'dm-layout-sec' }} hasAnimations hasStickyHeader inMiniHeaderMode rows-1200 hamburger-reverse dmPageBody{% if page_class %} d-page-{{ page_class }}{% endif %} dmDHeader" id="dm-outer-wrapper"{% if page_class %} data-page-class="{{ page_class }}"{% endif %} data-soch="true">
           <div id="dmStyle_outerContainer" class="dmOuter">
             <div id="dmStyle_innerContainer" class="dmInner">
               <div class="dmLayoutWrapper standard-var dmStandardDesktop">
                 <div id="site_content">
                   {% include "header.liquid" %}
-                  <div dmwrapped="true" id="dmFirstContainer" class="dmBody {{ content_class | default: 'u_dmStyle_template_dmPageNotFound' }}">
+                  <div id="dmFirstContainer" class="dmBody {{ content_class | default: 'u_dmStyle_template_dmPageNotFound' }}">
                     <div id="allWrapper" class="allWrapper">
                       <div id="dm_content" class="dmContent">
                         {{ content }}
