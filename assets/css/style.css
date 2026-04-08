@@ -81,7 +81,7 @@ button {
   --space-lg: 1.5rem;    /* 24px */
   --space-xl: 2rem;      /* 32px */
   --space-2xl: 3rem;     /* 48px */
-  --space-3xl: 4rem;     /* 64px */
+  --space-3xl: 6rem;     /* 96px */
   --space-4xl: 6rem;     /* 96px */
 
   /* Layout */
@@ -109,8 +109,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(1.75rem, 4.5vw, 3rem);
-  color: var(--color-white);
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  color: #FFFFFA;
 }
 
 h2 {
@@ -248,7 +248,7 @@ p:last-child {
   position: relative;
   background-color: var(--color-black);
   color: var(--color-white);
-  padding-top: calc(var(--header-height) + var(--space-2xl));
+  padding-top: calc(var(--header-height) + var(--space-3xl));
   padding-bottom: var(--space-3xl);
   overflow: hidden;
 }
@@ -601,6 +601,7 @@ p:last-child {
 .gallery__item {
   overflow: hidden;
   border-radius: var(--radius-sm);
+  max-height: 300px;
 }
 
 .gallery__item img {
