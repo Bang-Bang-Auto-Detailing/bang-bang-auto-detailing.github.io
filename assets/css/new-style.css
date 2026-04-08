@@ -614,9 +614,9 @@ p:last-child {
   transform: scale(1.05);
 }
 
-/* --- Accordion --- */
+/* --- Accordion (native <details>/<summary>) --- */
 .accordion__item {
-  border-bottom: 1px solid var(--color-light);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .accordion__trigger {
@@ -629,13 +629,21 @@ p:last-child {
   font-size: 1.125rem;
   font-weight: 700;
   text-align: left;
-  color: var(--color-dark);
+  color: inherit;
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion__trigger::-webkit-details-marker {
+  display: none;
 }
 
 .accordion__trigger::after {
   content: '+';
   font-size: 1.5rem;
   transition: transform var(--transition-base);
+  flex-shrink: 0;
+  margin-left: var(--space-md);
 }
 
 .accordion__item[open] .accordion__trigger::after {
