@@ -292,7 +292,7 @@ p:last-child {
 }
 
 @media (min-width: 1025px) {
-  .hero .container {
+  .hero--split .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-xl);
@@ -426,19 +426,16 @@ p:last-child {
   color: var(--color-pink);
 }
 
-@media (min-width: 1025px) {
-  .site-nav {
-    display: block;
-  }
-
-  .hamburger {
-    display: none;
+@media (max-width: 1024px) {
+  .site-header__cta {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
   }
 }
 
-/* --- Hamburger --- */
+/* --- Hamburger (mobile only) --- */
 .hamburger {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 6px;
@@ -453,6 +450,21 @@ p:last-child {
   height: 2px;
   background-color: var(--color-white);
   transition: transform var(--transition-base);
+}
+
+.site-header__phone {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hamburger,
+  .site-header__phone {
+    display: flex;
+  }
+
+  .site-nav {
+    display: none;
+  }
 }
 
 /* --- Mobile Drawer --- */
