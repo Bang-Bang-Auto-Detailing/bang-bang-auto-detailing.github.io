@@ -152,6 +152,12 @@ p:last-child {
   padding-block: var(--space-3xl);
 }
 
+@media (min-width: 1025px) {
+  .section {
+    padding-block: var(--space-4xl);
+  }
+}
+
 .section--dark {
   background-color: var(--color-black);
   color: var(--color-white);
@@ -249,8 +255,17 @@ p:last-child {
   background-color: var(--color-black);
   color: var(--color-white);
   padding-top: calc(var(--header-height) + var(--space-3xl));
-  padding-bottom: var(--space-3xl);
+  padding-bottom: var(--space-4xl);
   overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1025px) {
+  .hero--split {
+    min-height: 500px;
+  }
 }
 
 .hero__content {
@@ -601,7 +616,19 @@ p:last-child {
 .gallery__item {
   overflow: hidden;
   border-radius: var(--radius-sm);
-  max-height: 300px;
+  max-height: 150px;
+}
+
+@media (min-width: 768px) {
+  .gallery__item {
+    max-height: 180px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .gallery__item {
+    max-height: 250px;
+  }
 }
 
 .gallery__item img {
