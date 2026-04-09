@@ -371,8 +371,8 @@ p:last-child {
 }
 
 .section--dark .card {
-  background-color: rgba(255, 255, 255, 0.08);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-dark);
 }
 
 .section--dark .card__title {
@@ -380,7 +380,7 @@ p:last-child {
 }
 
 .section--dark .card__text {
-  color: var(--color-light);
+  color: var(--color-dark);
 }
 
 .card:hover {
@@ -388,9 +388,7 @@ p:last-child {
 }
 
 .card__image {
-  aspect-ratio: 3 / 2;
   overflow: hidden;
-  max-height: 160px;
 }
 
 .card__image img {
