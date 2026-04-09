@@ -478,24 +478,28 @@ p:last-child {
   transform: scaleX(1);
 }
 
+.site-nav__item {
+  position: relative;
+  padding-bottom: var(--space-sm);
+}
+
 .site-nav__dropdown {
   position: absolute;
   top: 100%;
-  left: 0;
-  background-color: rgba(28, 28, 30, 0.95);
+  left: -1rem;
+  background-color: rgba(28, 28, 30, 0.97);
   border-radius: var(--radius-sm);
   padding: var(--space-sm) 0;
-  min-width: 240px;
+  min-width: 280px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-8px);
-  transition: all var(--transition-base);
+  transition: opacity var(--transition-base), visibility var(--transition-base);
 }
 
-.site-nav__item:hover .site-nav__dropdown {
+.site-nav__item:hover .site-nav__dropdown,
+.site-nav__item:focus-within .site-nav__dropdown {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
 }
 
 .site-nav__dropdown-link {
