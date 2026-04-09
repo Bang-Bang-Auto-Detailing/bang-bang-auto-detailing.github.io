@@ -155,7 +155,7 @@ p:last-child {
 
 @media (min-width: 1025px) {
   .section {
-    padding-block: 9rem;
+    padding-block: 4rem;
   }
 }
 
