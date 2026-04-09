@@ -164,6 +164,13 @@ p:last-child {
   color: var(--color-white);
 }
 
+.section--services-bg {
+  background-image: url('/assets/img/y-so-serious-1920w.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .section--teal {
   background-color: var(--color-teal);
   color: var(--color-white);
@@ -398,12 +405,12 @@ p:last-child {
 }
 
 .card__body {
-  padding: var(--space-md);
+  padding: var(--space-sm);
 }
 
 @media (min-width: 1025px) {
   .card__body {
-    padding: var(--space-lg);
+    padding: var(--space-md);
   }
 }
 
