@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<section class="hero hero--split section--dark">
+  <div class="container">
+    <div class="hero__content">
+      <p class="text-green" style="font-weight: 700;">Bang Bang Auto Detailing</p>
+      <h1 class="hero__title">{{ hero_title | default: title }}</h1>
+    </div>
+    {% if hero_image %}
+    <div class="hero__image">
+      <img src="{{ hero_image }}" alt="{{ hero_image_alt | default: title }}" width="1920" height="1278">
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{{ content }}
+
+{% if uses_map %}
+<section class="section section--dark">
+  <div class="container">
+    <div class="grid grid--2" style="align-items: center;">
+      <div>
+        <h2 class="text-white">Book Your {{ short_title | default: title }} Today!</h2>
+        <p class="text-white">We make car care easy. With a simple phone call, our expert team comes to you.</p>
+        <div class="hero__actions" style="margin-top: var(--space-lg);">
+          <a href="https://book.housecallpro.com/book/Bang-Bang-Auto-Detailing/e1bfaf3c4d614223966fdf2a433df417?v2=true" class="btn btn--primary" target="_blank" rel="noopener">Book Online</a>
+          <a href="tel:{{ phone }}" class="btn btn--outline">Call Us Now</a>
+        </div>
+      </div>
+      <div id="map" class="map"></div>
+    </div>
+  </div>
+</section>
+{% endif %}

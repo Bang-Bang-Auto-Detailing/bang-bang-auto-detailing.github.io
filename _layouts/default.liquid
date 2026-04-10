@@ -1,216 +1,92 @@
 <!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">
+<html lang="en">
 
-{% assign title = title |  concat: ' | Bang Bang Auto Detailing' %}
+{% assign title = title | concat: ' | Bang Bang Auto Detailing' %}
 
 <head>
   <meta charset="utf-8">
   <title>{{ title }}</title>
   <link rel="canonical" href="https://www.bangbangautodetailing.com{{ page.url }}">
-  <meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="apple-touch-icon" href="/assets/img/Untitled+1630+x+900+px.jpg" />
-  <link rel="icon" type="image/x-icon" href="/assets/img/site_favicon_16_1738719270240.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="/assets/img/Untitled+1630+x+900+px.jpg">
+  <link rel="icon" type="image/x-icon" href="/assets/img/site_favicon_16_1738719270240.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <meta name="google-site-verification" content="62UuktzIjpheTufmrBeShFh4p_U65mgdQq4ssYtAo24" />
-  <meta name="description" content="{{ description }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.bangbangautodetailing.com{{ page.url }}" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="{{ title }}" />
-  <meta name="twitter:description" content="{{ description }}" />
-  <meta name="twitter:image" content="/assets/img/209-1920w.webp" />
-  <meta property="og:title" content="{{ title }}" />
-  <meta property="og:description" content="{{ description }}" />
-  <meta property="og:image" content="/assets/img/209-1920w.webp" />
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta name="google-site-verification" content="62UuktzIjpheTufmrBeShFh4p_U65mgdQq4ssYtAo24">
+  <meta name="description" content="{{ description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.bangbangautodetailing.com{{ page.url }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="/assets/img/209-1920w.webp">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="/assets/img/209-1920w.webp">
   <script type="application/ld+json">
     {
-      "@context" : "https://schema.org",
-      "@type" : "WebSite",
-      "name" : "Bang Bang Auto Detailing",
-      "url" : "https://www.bangbangautodetailing.com/"
-    }
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "#1 Auto Detailing in Orlando",
-        "item": "https://www.bangbangautodetailing.com/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About Bang Bang Auto Detailing",
-        "item": "https://www.bangbangautodetailing.com/about-us/"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Our Services",
-        "item": "https://www.bangbangautodetailing.com/services/"
-      },{
-        "@type": "ListItem",
-        "position": 4,
-        "name": "Full Exterior and Interior Car Detailing",
-        "item": "https://www.bangbangautodetailing.com/full-exterior-and-interior-detail/"
-      },{
-        "@type": "ListItem",
-        "position": 6,
-        "name": "Paint Correction and Trim Restoration Service",
-        "item": "https://www.bangbangautodetailing.com/paint-and-trim-restoration/"
-      },{
-        "@type": "ListItem",
-        "position": 7,
-        "name": "Expert Vinyl Removal Service",
-        "item": "https://www.bangbangautodetailing.com/vinyl-removal/"
-      },{
-        "@type": "ListItem",
-        "position": 8,
-        "name": "Expert Boats Detailing Service",
-        "item": "https://www.bangbangautodetailing.com/boats-detailing/"
-      },{
-        "@type": "ListItem",
-        "position": 9,
-        "name": "Expert RVs Detailing Service",
-        "item": "https://www.bangbangautodetailing.com/rvs-detailing/"
-      },{
-        "@type": "ListItem",
-        "position": 10,
-        "name": "Detailing Works Gallery",
-        "item": "https://www.bangbangautodetailing.com/see-our-work/"
-      },{
-        "@type": "ListItem",
-        "position": 11,
-        "name": "Contact Us",
-        "item": "https://www.bangbangautodetailing.com/contact-us/"
-      }]
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Bang Bang Auto Detailing",
+      "url": "https://www.bangbangautodetailing.com/"
     }
   </script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "LocalBusiness",
       "name": "Bang Bang Auto Detailing",
-      "alternateName": "Bang Bang Auto Detailing",
-      "url": "https://www.bangbangautodetailing.com/",
-      "logo": "https://www.bangbangautodetailing.com/assets/img/bangbanglogo-173w.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2 N Orange Ave",
+        "addressLocality": "Orlando",
+        "addressRegion": "FL",
+        "postalCode": "32801",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "28.54211",
+        "longitude": "-81.379036"
+      },
+      "url": "https://www.bangbangautodetailing.com",
+      "telephone": "{{ phone }}",
+      "email": "{{ email }}",
+      "logo": "https://www.bangbangautodetailing.com/assets/img/bangbanglogo.png",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "18:00" }
+      ],
+      "priceRange": "$$",
       "sameAs": [
-        "https://www.facebook.com/BangBangdetail",
-        "https://www.instagram.com/bangbangdetail/"
+        "https://facebook.com/BangBangdetail",
+        "https://instagram.com/bangbangdetail",
+        "https://youtube.com/@bangbangdetail6958"
       ]
     }
   </script>
-  <script type="application/ld+json">
-    {
-      "@context" : {
-        "@vocab" : "http://schema.org/"
-      },
-      "@type" : "LocalBusiness",
-      "name" : "Bang Bang Auto Detailing",
-      "address" : {
-        "@type" : "PostalAddress",
-        "streetAddress" : "2 N Orange Ave",
-        "addressLocality" : "Orlando",
-        "addressRegion" : "FL",
-        "postalCode" : "32801",
-        "addressCountry" : "US"
-      },
-      "geo" : {
-        "@type" : "GeoCoordinates",
-        "latitude" : "28.54211",
-        "longitude" : "-81.379036"
-      },
-      "url" : "https://www.bangbangautodetailing.com",
-      "description" : "Getting your car detailed is a hassle. At Bang Bang Auto Detailing, we bring the cleaning to you! There's no need to go out of your way when a simple phone call can get your car a showroom-quality clean right from home. As a top-rated car detailing service in Orlando, FL, we specialize in interior and exterior detailing, paint correction, ceramic coatings, and more. Our team is dedicated to providing a flawless finish with convenience and care. Whether you need a quick refresh or a deep clean, we guarantee professional results every time. Book your mobile detailing service today!",
-      "telephone" : "{{ phone }}",
-      "email" : "{{ email }}",
-      "logo" : "https://www.bangbangautodetailing.com/assets/img/bangbanglogo.png",
-      "sameAs" : [ "https://youtube.com/@bangbangdetail6958", "https://google.com/maps/place/Bang+Bang+Auto+Detailing/data=!4m2!3m1!1s0x0:0xe070d908de665010?sa=X&ved=1t:2428&hl=en&ictx=111", "https://instagram.com/bangbangdetail", "https://facebook.com/BangBangdetail" ],
-      "image" : [ "https://www.bangbangautodetailing.com/assets/img/1750.png", "https://www.bangbangautodetailing.com/assets/img/pre-owned-travel-trailers-sale-campers-rvs-dealership-lot.jpg", "https://www.bangbangautodetailing.com/assets/img/20108669.jpg", "https://www.bangbangautodetailing.com/assets/img/pexels-photo-10126663.jpeg", "https://www.bangbangautodetailing.com/assets/img/21-b7748d4b.png" ],
-      "openingHoursSpecification" : [ {
-        "@type" : "OpeningHoursSpecification",
-        "dayOfWeek" : [ "Monday" ],
-        "opens" : "09:00",
-        "closes" : "18:00"
-      }, {
-        "@type" : "OpeningHoursSpecification",
-        "dayOfWeek" : [ "Tuesday" ],
-        "opens" : "09:00",
-        "closes" : "18:00"
-      }, {
-        "@type" : "OpeningHoursSpecification",
-        "dayOfWeek" : [ "Wednesday" ],
-        "opens" : "09:00",
-        "closes" : "18:00"
-      }, {
-        "@type" : "OpeningHoursSpecification",
-        "dayOfWeek" : [ "Thursday" ],
-        "opens" : "09:00",
-        "closes" : "18:00"
-      }, {
-        "@type" : "OpeningHoursSpecification",
-        "dayOfWeek" : [ "Friday" ],
-        "opens" : "09:00",
-        "closes" : "18:00"
-      }, {
-        "@type" : "OpeningHoursSpecification",
-        "dayOfWeek" : [ "Saturday" ],
-        "opens" : "09:00",
-        "closes" : "18:00"
-      } ],
-      "@id" : "https://www.bangbangautodetailing.com",
-      "priceRange" : "$$"
-    }
-  </script>
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CN3YZ1T57"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-7CN3YZ1T57');
   </script>
 </head>
 
-<body id="dmRoot"{% if page_alias %} data-page-alias="{{ page_alias }}"{% endif %} class="dmRoot fix-mobile-scrolling flex-site dmResellerSite " style="padding:0;margin:0;" data-flex-site>
-  <div id="dm" class='dmwr'>
-    <div class="dm_wrapper -var5 null ">
-      <div id="1084548655"{% if wrapper_class %} class="{{ wrapper_class }}"{% endif %}>
-        <div dmtemplateid="FlexHeader" class="runtime-module-container dm-bfs {{ body_class | default: 'dm-layout-sec' }} hasAnimations hasStickyHeader inMiniHeaderMode rows-1200 hamburger-reverse dmPageBody{% if page_class %} d-page-{{ page_class }}{% endif %} dmDHeader" id="dm-outer-wrapper"{% if page_class %} data-page-class="{{ page_class }}"{% endif %} data-soch="true">
-          <div id="dmStyle_outerContainer" class="dmOuter">
-            <div id="dmStyle_innerContainer" class="dmInner">
-              <div class="dmLayoutWrapper standard-var dmStandardDesktop">
-                <div id="site_content">
-                  {% include "header.liquid" %}
-                  <div id="dmFirstContainer" class="dmBody {{ content_class | default: 'u_dmStyle_template_dmPageNotFound' }}">
-                    <div id="allWrapper" class="allWrapper">
-                      <div id="dm_content" class="dmContent">
-                        {{ content }}
-                      </div>
-                    </div>
-                  </div>
-                  {% include "footer.liquid" %}
-                  {% include "message-us.liquid" %}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<body{% if page_alias %} data-page-alias="{{ page_alias }}"{% endif %}>
+  {% include "header.liquid" %}
+
+  <main>
+    {{ content }}
+  </main>
+
+  {% include "footer.liquid" %}
+
   {% if uses_gallery %}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css" integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  {% endif %}
-  <script src="/assets/js/runtime-module-layout.694f094e9774b8c32aca.js"></script>
-  {% if uses_gallery %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css" integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe.umd.min.js" integrity="sha512-BXwwGU7zCXVgpT2jpXnTbioT9q1Byf7NEXVxovTZPlNvelL2I/4LjOaoiB2a19L+g5za8RbkoJFH4fMPQcjFFw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe-lightbox.umd.min.js" integrity="sha512-D16CBrIrVF48W0Ou0ca3D65JFo/HaEAjTugBXeWS/JH+1KNu54ZOtHPccxJ7PQ44rTItUT6DSI6xNL+U34SuuQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   {% endif %}
@@ -219,6 +95,51 @@
   <script src="https://api.mapbox.com/mapbox-gl-js/v3.13.0/mapbox-gl.js"></script>
   <script>window.MAPBOX_KEY = "{{ mapbox_key }}";</script>
   {% endif %}
-  <script type="text/javascript" src="/assets/js/script.js"></script>
+  <script>
+    // Hamburger menu
+    const toggle = document.getElementById('hamburger-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const overlay = document.getElementById('drawer-overlay');
+    const close = document.getElementById('drawer-close');
+
+    function openDrawer() {
+      drawer.setAttribute('open', '');
+      overlay.classList.add('is-visible');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+    function closeDrawer() {
+      drawer.removeAttribute('open');
+      overlay.classList.remove('is-visible');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    toggle?.addEventListener('click', () => drawer.hasAttribute('open') ? closeDrawer() : openDrawer());
+    close?.addEventListener('click', closeDrawer);
+    overlay?.addEventListener('click', closeDrawer);
+
+    // PhotoSwipe
+    if (typeof PhotoSwipeLightbox !== 'undefined' && document.getElementById('gallery')) {
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: '#gallery',
+        children: 'a',
+        pswpModule: PhotoSwipe
+      });
+      lightbox.init();
+    }
+
+    // Mapbox
+    if (typeof mapboxgl !== 'undefined' && document.getElementById('map')) {
+      const map = new mapboxgl.Map({
+        accessToken: window.MAPBOX_KEY,
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: [-81.379039, 28.54211],
+        zoom: 13
+      });
+      map.addControl(new mapboxgl.FullscreenControl());
+      map.addControl(new mapboxgl.NavigationControl());
+      new mapboxgl.Marker().setLngLat([-81.379039, 28.54211]).addTo(map);
+    }
+  </script>
 </body>
 </html>
