@@ -898,6 +898,16 @@ p:last-child {
   color: var(--color-green);
 }
 
+.pill-green {
+  display: inline-block;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  padding: var(--space-xs) var(--space-xl);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
 .text-white {
   color: var(--color-white);
 }
