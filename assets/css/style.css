@@ -58,6 +58,7 @@ button {
   --color-pink: #E01882;
   --color-green: #6BBE4A;
   --color-black: #000000;
+  --color-red: #CC0000;
 
   /* Legacy color map (for transition) */
   --color_1: var(--color-dark);
@@ -213,9 +214,14 @@ p:last-child {
 }
 
 .review-card__stars {
-  color: #FFD700;
+  color: var(--color-pink);
   font-size: 1.2rem;
   margin-bottom: var(--space-sm);
+}
+
+.review-card--dark {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--color-white);
 }
 
 /* --- Grid --- */
