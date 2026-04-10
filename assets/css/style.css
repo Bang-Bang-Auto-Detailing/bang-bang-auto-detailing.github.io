@@ -905,13 +905,20 @@ p:last-child {
 }
 
 .pill-green {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
   background-color: var(--color-green);
   color: var(--color-white);
   padding: var(--space-xs) var(--space-xl);
   border-radius: 999px;
   font-weight: 700;
   font-size: 0.875rem;
+}
+
+.pill-green img {
+  width: 24px;
+  height: 24px;
 }
 
 .text-white {
