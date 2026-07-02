@@ -14,6 +14,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
   color: var(--color-dark);
   background-color: var(--color-white);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img {
@@ -56,6 +58,7 @@ button {
   --color-white: #FFFFFF;
   --color-teal: #032621;
   --color-pink: #E01882;
+  --color-pink-light: #FCE7F2;
   --color-green: #6BBE4A;
   --color-black: #000000;
   --color-red: #CC0000;
@@ -181,15 +184,8 @@ p:last-child {
 }
 
 .section--pink {
-  background-color: var(--color-pink);
-  color: var(--color-white);
-}
-
-.section--pink h2,
-.section--pink h3,
-.section--pink h4,
-.section--pink h5 {
-  color: var(--color-white);
+  background-color: var(--color-pink-light);
+  color: var(--color-dark);
 }
 
 /* --- Review card --- */
@@ -198,6 +194,7 @@ p:last-child {
   color: var(--color-dark);
   border-radius: var(--radius-md);
   padding: var(--space-lg);
+  text-align: center;
 }
 
 .review-card__header {
@@ -207,16 +204,33 @@ p:last-child {
   margin-bottom: var(--space-md);
 }
 
+.review-card__text {
+  color: var(--color-dark);
+}
+
 .review-card__avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  margin: var(--space-md) auto var(--space-sm);
 }
 
 .review-card__stars {
-  color: var(--color-pink);
+  color: var(--color-green);
   font-size: 1.2rem;
   margin-bottom: var(--space-sm);
+}
+
+.review-card__name {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.review-card__date {
+  color: var(--color-dark);
+  opacity: 0.6;
+  font-size: 0.875rem;
+  margin-bottom: 0;
 }
 
 .review-card--dark {
@@ -237,30 +251,42 @@ p:last-child {
 }
 
 .grid--2 {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .grid--3 {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 @media (min-width: 768px) {
   .grid--2 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .grid--3 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 1025px) {
   .grid--3 {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .grid--5 {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
@@ -618,7 +644,7 @@ p:last-child {
 .site-footer {
   background-color: var(--color-black);
   color: var(--color-white);
-  padding-block: var(--space-3xl);
+  padding-top: var(--space-3xl);
 }
 
 .site-footer__grid {
@@ -650,23 +676,53 @@ p:last-child {
   color: var(--color-pink);
 }
 
+.site-footer__link.is-active {
+  color: var(--color-pink);
+}
+
 .site-footer__logo {
   text-align: center;
   margin-bottom: var(--space-2xl);
 }
 
 .site-footer__logo img {
+  width: min(360px, 85vw);
+  height: auto;
   margin-inline: auto;
-  max-width: 300px;
+}
+
+.site-footer__hours-row {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.site-footer__hours-row:last-child {
+  margin-bottom: 0;
 }
 
 .site-footer__bottom {
-  text-align: center;
   margin-top: var(--space-2xl);
-  padding-top: var(--space-lg);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-block: var(--space-md);
+  background-color: rgba(255, 255, 255, 0.03);
+  text-align: center;
   font-size: 0.875rem;
   color: var(--color-light);
+}
+
+/* Mobile / tablet-sm: center the whole footer */
+@media (max-width: 600px) {
+  .site-footer__grid > div {
+    text-align: center;
+  }
+
+  .site-footer__hours-row {
+    justify-content: center;
+  }
+
+  .site-footer .social-icons {
+    justify-content: center;
+  }
 }
 
 /* --- Social Icons --- */
@@ -687,6 +743,22 @@ p:last-child {
 
 .social-icons__link:hover {
   color: var(--color-pink);
+}
+
+.booking-cta .social-icons__link {
+  color: var(--color-pink);
+}
+
+.booking-cta .social-icons__link:hover {
+  color: var(--color-dark);
+}
+
+.site-footer .social-icons__link {
+  color: var(--color-pink);
+}
+
+.site-footer .social-icons__link:hover {
+  color: var(--color-white);
 }
 
 /* --- Gallery --- */
@@ -753,6 +825,124 @@ p:last-child {
 .section--bordered {
   border-left: 4px solid var(--color-green);
   padding-left: var(--space-xl);
+}
+
+/* --- Section media (image-backed half-column) --- */
+.media-tile {
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-md);
+  min-height: 360px;
+}
+
+@media (min-width: 769px) {
+  .media-tile {
+    min-height: 100%;
+  }
+}
+
+/* --- Full-bleed image banner between sections --- */
+.section--banner {
+  background-size: cover;
+  background-position: center;
+  height: 320px;
+}
+
+@media (min-width: 769px) {
+  .section--banner {
+    height: 400px;
+  }
+}
+
+/* --- Areas we serve (home section[6]) --- */
+.areas-section {
+  background-repeat: no-repeat;
+}
+
+.area-pill {
+  text-align: left;
+}
+
+@media (max-width: 1024px) {
+  .areas-section .grid--5 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 480px;
+    margin-inline: auto;
+  }
+  .area-pill {
+    justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .areas-section .grid--5 {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+  }
+}
+
+/* --- Service hero icon / eyebrow --- */
+.hero__icon {
+  display: block;
+  margin: 0 auto var(--space-md);
+  width: 128px;
+  height: auto;
+}
+
+.hero__eyebrow {
+  color: var(--color-white);
+  margin-bottom: var(--space-md);
+}
+
+/* --- Booking CTA icon (above map section) --- */
+.booking-cta__icon {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-bottom: var(--space-md);
+  background-color: var(--color-pink);
+  -webkit-mask: url('/assets/img/car-detailing-icon.svg') center / contain no-repeat;
+          mask: url('/assets/img/car-detailing-icon.svg') center / contain no-repeat;
+}
+
+/* --- Service Menu (dark pricing tiers on light section) --- */
+.service-menu {
+  background-color: var(--color-light);
+}
+
+.service-tier {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+}
+
+.service-tier h3 {
+  margin-bottom: var(--space-md);
+}
+
+.service-tier__list {
+  list-style: disc;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-md);
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.service-tier__list li {
+  margin-bottom: var(--space-xs);
+}
+
+.service-tier__tagline {
+  color: var(--color-green);
+  font-style: italic;
+  margin-bottom: var(--space-sm);
+}
+
+.service-tier__body {
+  color: var(--color-white);
 }
 
 /* --- Accordion (native <details>/<summary>) --- */

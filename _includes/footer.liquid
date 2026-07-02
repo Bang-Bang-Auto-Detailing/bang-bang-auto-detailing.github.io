@@ -2,7 +2,7 @@
   <div class="container">
     <div class="site-footer__logo">
       <a href="/">
-        <img src="/assets/img/bang-bang-logo-header-1920w.png" alt="Bang Bang Auto Detailing" width="300" loading="lazy">
+        <img src="/assets/img/bang-bang-logo-header-1920w.png" alt="Bang Bang Auto Detailing" width="1630" height="900" loading="lazy">
       </a>
     </div>
 
@@ -10,12 +10,12 @@
       <div>
         <h4 class="site-footer__heading">Services</h4>
         <nav aria-label="Footer services">
-          <a href="/full-exterior-and-interior-detail/" class="site-footer__link">Full Exterior and Interior Detail</a>
-          <a href="/ceramic-coating/" class="site-footer__link">Ceramic Coating</a>
-          <a href="/paint-and-trim-restoration/" class="site-footer__link">Paint Correction</a>
-          <a href="/vinyl-removal/" class="site-footer__link">Vinyl Removal</a>
-          <a href="/boats-detailing/" class="site-footer__link">Boats Detailing</a>
-          <a href="/rvs-detailing/" class="site-footer__link">RVs Detailing</a>
+          <a href="/full-exterior-and-interior-detail/" class="site-footer__link{% if page.url == '/full-exterior-and-interior-detail/' %} is-active{% endif %}">Full Exterior and Interior Detail</a>
+          <a href="/ceramic-coating/" class="site-footer__link{% if page.url == '/ceramic-coating/' %} is-active{% endif %}">Ceramic Coating</a>
+          <a href="/paint-and-trim-restoration/" class="site-footer__link{% if page.url == '/paint-and-trim-restoration/' %} is-active{% endif %}">Paint Correction</a>
+          <a href="/vinyl-removal/" class="site-footer__link{% if page.url == '/vinyl-removal/' %} is-active{% endif %}">Vinyl Removal</a>
+          <a href="/boats-detailing/" class="site-footer__link{% if page.url == '/boats-detailing/' %} is-active{% endif %}">Boats Detailing</a>
+          <a href="/rvs-detailing/" class="site-footer__link{% if page.url == '/rvs-detailing/' %} is-active{% endif %}">RVs Detailing</a>
         </nav>
       </div>
 
@@ -27,12 +27,12 @@
 
       <div>
         <h4 class="site-footer__heading">Business Hours</h4>
-        <dl>
-          <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm);">
+        <dl class="site-footer__hours">
+          <div class="site-footer__hours-row">
             <dt>Mon - Sat</dt>
             <dd>9:00 am - 6:00 pm</dd>
           </div>
-          <div style="display: flex; justify-content: space-between;">
+          <div class="site-footer__hours-row">
             <dt>Sunday</dt>
             <dd>Closed</dd>
           </div>
@@ -48,14 +48,16 @@
           <a href="https://youtube.com/@bangbangdetail6958" target="_blank" rel="noopener" aria-label="YouTube" class="social-icons__link">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 4-8 4z"/></svg>
           </a>
-          <a href="https://www.google.com/maps/place/Bang+Bang+Auto+Detailing/" target="_blank" rel="noopener" aria-label="Google My Business" class="social-icons__link">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+          <a href="https://www.google.com/maps/place/Bang+Bang+Auto+Detailing/@28.591304,-81.3208945,10z/data=!3m1!4b1!4m6!3m5!1s0xa647a3cc9f0eb10d:0xe070d908de665010!8m2!3d28.591304!4d-81.3208945!16s%2Fg%2F11rdz_zck0?entry=ttu&amp;g_ep=EgoyMDI1MDIxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" aria-label="Google My Business" class="social-icons__link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72L4.318 3.44A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z"/></svg>
           </a>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="site-footer__bottom">
+  <div class="site-footer__bottom">
+    <div class="container">
       &copy; {{ "now" | date: "%Y" }} All Rights Reserved | Bang Bang Auto Detailing
     </div>
   </div>
