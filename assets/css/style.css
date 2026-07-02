@@ -342,12 +342,27 @@ p:last-child {
   position: relative;
   background-color: var(--color-black);
   color: var(--color-white);
-  padding-top: calc(var(--header-height) + var(--space-3xl));
+  padding-top: calc(var(--header-height) + var(--space-2xl) + var(--space-sm));
   padding-bottom: 0;
   overflow: hidden;
   min-height: 400px;
   display: flex;
+  align-items: flex-start;
+}
+
+.hero--split {
+  padding-top: calc(var(--header-height) + var(--space-sm));
   align-items: center;
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: calc(var(--header-height) + var(--space-2xl) - var(--space-xs));
+  }
+
+  .hero--split {
+    padding-top: calc(var(--header-height) + var(--space-md));
+  }
 }
 
 @media (min-width: 1025px) {
@@ -881,17 +896,11 @@ p:last-child {
   }
 }
 
-/* --- Service hero icon / eyebrow --- */
-.hero__icon {
-  display: block;
-  margin: 0 auto var(--space-md);
-  width: 128px;
-  height: auto;
-}
-
+/* --- Home hero pretitle (dim eyebrow line above H1) --- */
 .hero__eyebrow {
-  color: var(--color-white);
-  margin-bottom: var(--space-md);
+  color: rgb(3, 38, 33);
+  font-size: 1.125rem;
+  margin-bottom: 0;
 }
 
 /* --- Booking CTA icon (above map section) --- */
@@ -1132,18 +1141,24 @@ p:last-child {
 .pill-green {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: 0.625rem;
   background-color: var(--color-green);
   color: var(--color-white);
-  padding: var(--space-xs) var(--space-xl);
+  padding: 0.3125rem 3.75rem;
   border-radius: 999px;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 480px) {
+  .pill-green {
+    padding: 0.3125rem 1.25rem;
+  }
 }
 
 .pill-green img {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
 }
 
 .text-white {
