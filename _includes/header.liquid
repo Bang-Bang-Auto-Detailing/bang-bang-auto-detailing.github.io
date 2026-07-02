@@ -1,5 +1,11 @@
 <header class="site-header">
   <div class="site-header__inner container">
+    <a href="tel:{{ phone }}" class="site-header__phone" aria-label="Call {{ phone }}">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+    </a>
+
     <a href="/" class="site-header__logo">
       <img src="/assets/img/bangbanglogo-173w.png" alt="Bang Bang Auto Detailing" width="173" height="113">
     </a>
@@ -13,7 +19,7 @@
           <a href="/about-us/" class="site-nav__link{% if page.url == '/about-us/' %} site-nav__link--active{% endif %}">About Us</a>
         </li>
         <li class="site-nav__item">
-          <a href="/services/" class="site-nav__link{% if page.url == '/services/' %} site-nav__link--active{% endif %}">Services</a>
+          <a href="/services/" class="site-nav__link{% if page.url == '/services/' %} site-nav__link--active{% endif %}">Services <span class="site-nav__chevron" aria-hidden="true">⌄</span></a>
           <ul class="site-nav__dropdown">
             <li><a href="/full-exterior-and-interior-detail/" class="site-nav__dropdown-link">Full Exterior and Interior Detail</a></li>
             <li><a href="/ceramic-coating/" class="site-nav__dropdown-link">Ceramic Coating</a></li>
@@ -33,12 +39,6 @@
     </nav>
 
     <a href="https://book.housecallpro.com/book/Bang-Bang-Auto-Detailing/e1bfaf3c4d614223966fdf2a433df417?v2=true" class="btn btn--primary site-header__cta" target="_blank" rel="noopener">Book Online</a>
-
-    <a href="tel:{{ phone }}" class="site-header__phone" aria-label="Call {{ phone }}">
-      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-      </svg>
-    </a>
 
     <button class="hamburger" id="hamburger-toggle" aria-label="Open menu" aria-expanded="false">
       <span class="hamburger__bar"></span>
