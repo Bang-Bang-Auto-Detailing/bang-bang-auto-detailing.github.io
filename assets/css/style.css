@@ -1057,6 +1057,13 @@ p:last-child {
   background-position: center;
 }
 
+/* --- Light wavy-lines texture (see-our-work gallery) --- */
+.section--waves {
+  background-color: #fff;
+  background-image: url('/assets/img/918-2880w.jpg');
+  background-repeat: repeat;
+}
+
 /* --- Service Menu (dark pricing tiers on light section) --- */
 .service-menu {
   background-color: var(--color-light);
