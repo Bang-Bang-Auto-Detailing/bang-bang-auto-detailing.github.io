@@ -267,26 +267,35 @@ p:last-child {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .grid--3 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .grid--4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 769px) {
   .grid--3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
 
+@media (min-width: 1025px) {
   .grid--4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .grid--5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* --- Intro section: image stacks above text on mobile/tablet --- */
+@media (max-width: 768px) {
+  .grid--media-first-mobile > *:first-child {
+    order: 2;
+  }
+
+  .grid--media-first-mobile > *:last-child {
+    order: 1;
   }
 }
 
@@ -333,6 +342,17 @@ p:last-child {
 }
 
 .btn--green {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.btn--outline-green {
+  background-color: transparent;
+  color: var(--color-green);
+  border: 2px solid var(--color-green);
+}
+
+.btn--outline-green:hover {
   background-color: var(--color-green);
   color: var(--color-white);
 }
@@ -906,12 +926,46 @@ p:last-child {
 /* --- Booking CTA icon (above map section) --- */
 .booking-cta__icon {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   margin-bottom: var(--space-md);
   background-color: var(--color-pink);
   -webkit-mask: url('/assets/img/car-detailing-icon.svg') center / contain no-repeat;
           mask: url('/assets/img/car-detailing-icon.svg') center / contain no-repeat;
+}
+
+/* --- Booking CTA section (scallop texture behind content) --- */
+.booking-cta-section {
+  background-color: var(--color-light);
+  background-image: url('/assets/img/476-2880w.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* --- Heading underline rule (used on content-section headings) --- */
+.heading-rule {
+  border-bottom: 3px solid var(--color-pink);
+  padding-bottom: var(--space-md);
+}
+
+.heading-rule--green {
+  border-bottom-color: var(--color-green);
+}
+
+/* --- Why Choose (single-column stacked list) --- */
+.why-choose__item {
+  margin-bottom: var(--space-xl);
+}
+
+.why-choose__item:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Marble texture section (mid-page centered content) --- */
+.section--marble {
+  background-image: url('/assets/img/pexels-photo-2341290-2880w.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* --- Service Menu (dark pricing tiers on light section) --- */

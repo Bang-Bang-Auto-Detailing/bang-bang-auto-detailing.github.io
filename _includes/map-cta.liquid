@@ -1,4 +1,4 @@
-<section class="section" style="background-color: var(--color-light);">
+<section class="section booking-cta-section">
   <div class="container">
     <div class="grid grid--2" style="align-items: center;">
       <div class="booking-cta">
@@ -7,7 +7,7 @@
         {{ body }}
         <div class="hero__actions" style="margin-top: var(--space-lg);">
           <a href="https://book.housecallpro.com/book/Bang-Bang-Auto-Detailing/e1bfaf3c4d614223966fdf2a433df417?v2=true" class="btn btn--primary" target="_blank" rel="noopener">Book Online</a>
-          <a href="tel:{{ phone }}" class="btn btn--outline">Call Us Now</a>
+          <a href="tel:{{ phone }}" class="btn {% if call_pink %}btn--outline{% else %}btn--outline-green{% endif %}">Call Us Now</a>
         </div>
         {% if show_social %}
         <div class="social-icons" style="margin-top: var(--space-xl);">
@@ -20,8 +20,11 @@
           <a href="https://youtube.com/@bangbangdetail6958" target="_blank" rel="noopener" aria-label="YouTube" class="social-icons__link">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 4-8 4z"/></svg>
           </a>
-          <a href="https://www.google.com/maps/place/Bang+Bang+Auto+Detailing/" target="_blank" rel="noopener" aria-label="Google My Business" class="social-icons__link">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+          <a href="mailto:{{ email }}" aria-label="Email" class="social-icons__link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>
+          </a>
+          <a href="https://wa.me/14078789967" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icons__link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.669.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.347-.174-1.464-.54-2.788-1.72-1.03-.919-1.726-2.053-1.928-2.4-.2-.347-.021-.535.15-.708.154-.153.34-.397.51-.596.171-.198.228-.339.342-.562.114-.228.057-.427-.028-.6-.086-.172-.769-1.854-1.055-2.54-.276-.66-.559-.573-.769-.573-.198-.011-.427-.011-.655-.011-.228 0-.6.086-.914.427-.317.34-1.207 1.179-1.207 2.878s1.236 3.338 1.406 3.567c.171.228 2.435 3.72 5.905 5.212.826.356 1.47.567 1.97.723.828.263 1.582.226 2.178.137.664-.099 2.038-.833 2.326-1.638.288-.804.288-1.494.202-1.638-.086-.144-.314-.23-.658-.404z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.552 4.15 1.602 5.955L0 24l6.198-1.573A11.928 11.928 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.943a9.87 9.87 0 01-5.038-1.373l-.36-.214-3.741.981.998-3.649-.235-.374A9.869 9.869 0 012.1 12c0-5.462 4.438-9.9 9.9-9.9s9.9 4.438 9.9 9.9-4.438 9.9-9.9 9.9z"/></svg>
           </a>
         </div>
         {% endif %}

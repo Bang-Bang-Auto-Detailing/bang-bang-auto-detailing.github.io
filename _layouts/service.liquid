@@ -10,12 +10,3 @@ layout: default
 </section>
 
 {{ content }}
-
-{% if uses_map %}
-<section class="section--banner" style="background-image: url('/assets/img/476-2880w.jpg');" aria-hidden="true"></section>
-{% capture default_cta_heading %}Book Your {{ short_title | default: title }} Today!{% endcapture %}
-{% assign resolved_cta_heading = cta_heading | default: default_cta_heading %}
-{% capture default_cta_body %}<p>We make car care easy. With a simple phone call, our expert team comes to you.</p>{% endcapture %}
-{% assign resolved_cta_body = cta_body | default: default_cta_body %}
-{% include "map-cta.liquid" heading: resolved_cta_heading, body: resolved_cta_body, show_social: true %}
-{% endif %}
