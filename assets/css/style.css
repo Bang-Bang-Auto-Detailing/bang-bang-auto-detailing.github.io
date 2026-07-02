@@ -624,9 +624,7 @@ p:last-child {
 }
 
 .site-nav__chevron {
-  display: inline-block;
-  margin-left: 0.3em;
-  font-size: 0.7em;
+  margin-left: 0.35em;
   vertical-align: middle;
 }
 
