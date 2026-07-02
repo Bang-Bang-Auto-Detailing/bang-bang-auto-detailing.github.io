@@ -1,3 +1,6 @@
 _site/
 node_modules/
 .env
+
+# BackstopJS visual regression outputs (references are regenerable, ~70MB)
+tests/backstop/backstop_data/

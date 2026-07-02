@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve"
+    "start": "npx @11ty/eleventy --serve",
+    "backstop:test": "backstop test --config=tests/backstop/backstop.json",
+    "backstop:reference": "backstop reference --config=tests/backstop/backstop.json",
+    "backstop:approve": "backstop approve --config=tests/backstop/backstop.json"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +16,8 @@
   "dependencies": {
     "@11ty/eleventy": "^3.1.0",
     "dotenv": "^17.4.1"
+  },
+  "devDependencies": {
+    "backstopjs": "^6.3.25"
   }
 }
