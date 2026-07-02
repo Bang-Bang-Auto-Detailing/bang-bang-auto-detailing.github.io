@@ -385,6 +385,25 @@ p:last-child {
   }
 }
 
+/* --- Mobile/tablet-sm: hero content stacks centered (matches production) --- */
+@media (max-width: 767px) {
+  .hero--split .hero__content {
+    text-align: center;
+  }
+}
+
+/* --- Action button rows (hero + CTA) center as a group and shrink to fit on one line at mobile --- */
+@media (max-width: 767px) {
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__actions .btn {
+    padding: 0.625rem 1.375rem;
+    font-size: 1rem;
+  }
+}
+
 @media (min-width: 1025px) {
   .hero--split {
     min-height: 500px;
@@ -491,6 +510,13 @@ p:last-child {
 
 .card__text {
   margin-bottom: var(--space-md);
+}
+
+/* --- Mobile/tablet-sm: card content stacks centered (matches production) --- */
+@media (max-width: 767px) {
+  .card__body {
+    text-align: center;
+  }
 }
 
 /* --- Navigation --- */
@@ -986,6 +1012,25 @@ p:last-child {
   background-position: center;
 }
 
+/* --- Mobile/tablet-sm: CTA icon and social row center (matches production on every page) --- */
+@media (max-width: 767px) {
+  .booking-cta__icon {
+    margin-inline: auto;
+  }
+
+  .booking-cta .social-icons {
+    justify-content: center;
+  }
+}
+
+/* --- Home page's "GET IN TOUCH" CTA fully centers its heading/body at mobile;
+   service-page CTAs keep their heading/body left-aligned (matches production) --- */
+@media (max-width: 767px) {
+  body[data-page-alias="home"] .booking-cta {
+    text-align: center;
+  }
+}
+
 /* --- Heading underline rule (used on content-section headings) --- */
 .heading-rule {
   border-bottom: 3px solid var(--color-pink);
@@ -1226,6 +1271,15 @@ p:last-child {
 /* --- Utilities --- */
 .text-center {
   text-align: center;
+}
+
+/* Centers content only when it stacks to a single column at mobile/tablet-sm,
+   matching production's mobile-only recentering (desktop/tablet-lg left-alignment
+   inside two-column sections is left untouched). */
+@media (max-width: 767px) {
+  .text-center-mobile {
+    text-align: center;
+  }
 }
 
 .text-pink {
