@@ -985,12 +985,6 @@ p:last-child {
 }
 
 /* --- Home hero pretitle (dim eyebrow line above H1) --- */
-.hero__eyebrow {
-  color: rgb(3, 38, 33);
-  font-size: 1.125rem;
-  margin-bottom: 0;
-}
-
 /* --- Booking CTA icon (above map section) --- */
 .booking-cta__icon {
   display: block;
