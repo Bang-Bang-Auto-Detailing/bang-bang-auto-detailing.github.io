@@ -1,5 +1,8 @@
 import 'dotenv/config';
+import { readFile, writeFile } from 'node:fs/promises';
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import { minify as minifyHtml } from 'html-minifier-terser';
+import CleanCSS from 'clean-css';
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
@@ -28,4 +31,29 @@ export default function (eleventyConfig) {
   eleventyConfig.setIncludesDirectory('_includes');
   eleventyConfig.setLayoutsDirectory('_layouts');
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
+  // Minify only for `npm run build` — dev server output stays readable.
+  if (process.env.ELEVENTY_RUN_MODE === 'build') {
+    eleventyConfig.addTransform('htmlmin', function (content) {
+      if (!this.page.outputPath || !this.page.outputPath.endsWith('.html')) {
+        return content;
+      }
+      return minifyHtml(content, {
+        collapseWhitespace: true,
+        removeComments: true,
+        minifyCSS: true,
+        minifyJS: true,
+      });
+    });
+
+    eleventyConfig.on('eleventy.after', async ({ dir }) => {
+      const cssPath = `${dir.output}/assets/css/style.css`;
+      const css = await readFile(cssPath, 'utf8');
+      const minified = new CleanCSS().minify(css);
+      if (minified.errors.length) {
+        throw new Error(`CSS minification failed: ${minified.errors.join('; ')}`);
+      }
+      await writeFile(cssPath, minified.styles);
+    });
+  }
 };
