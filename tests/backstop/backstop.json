@@ -1,24 +1,216 @@
 {
   "id": "bangbang_prod_vs_local",
   "viewports": [
-    { "label": "mobile-375", "width": 375, "height": 812 },
-    { "label": "tablet-sm-600", "width": 600, "height": 900 },
-    { "label": "tablet-lg-900", "width": 900, "height": 1000 },
-    { "label": "desktop-1440", "width": 1440, "height": 900 }
+    {
+      "label": "mobile-375",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "label": "tablet-sm-600",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "label": "tablet-lg-900",
+      "width": 900,
+      "height": 1000
+    },
+    {
+      "label": "desktop-1440",
+      "width": 1440,
+      "height": 900
+    }
   ],
-  "onReadyScript": "onReady.js",
+  "onReadyScript": "onReady.cjs",
   "scenarios": [
-    { "label": "home", "url": "http://localhost:8080/", "referenceUrl": "https://www.bangbangautodetailing.com/", "hideSelectors": ["iframe", "#map", ".map", ".mapContainer"], "delay": 1500, "misMatchThreshold": 0.05, "requireSameDimensions": false, "selectors": ["document"] },
-    { "label": "about-us", "url": "http://localhost:8080/about-us/", "referenceUrl": "https://www.bangbangautodetailing.com/about-us/", "hideSelectors": ["iframe", "#map", ".map", ".mapContainer"], "delay": 1500, "misMatchThreshold": 0.05, "requireSameDimensions": false, "selectors": ["document"] },
-    { "label": "contact-us", "url": "http://localhost:8080/contact-us/", "referenceUrl": "https://www.bangbangautodetailing.com/contact-us/", "hideSelectors": ["iframe", "#map", ".map", ".mapContainer"], "delay": 1500, "misMatchThreshold": 0.05, "requireSameDimensions": false, "selectors": ["document"] },
-    { "label": "see-our-work", "url": "http://localhost:8080/see-our-work/", "referenceUrl": "https://www.bangbangautodetailing.com/see-our-work/", "hideSelectors": ["iframe", "#map", ".map", ".mapContainer"], "delay": 1500, "misMatchThreshold": 0.05, "requireSameDimensions": false, "selectors": ["document"] },
-    { "label": "services", "url": "http://localhost:8080/services/", "referenceUrl": "https://www.bangbangautodetailing.com/services/", "hideSelectors": ["iframe", "#map", ".map", ".mapContainer"], "delay": 1500, "misMatchThreshold": 0.05, "requireSameDimensions": false, "selectors": ["document"] },
-    { "label": "ceramic-coating", "url": "http://localhost:8080/ceramic-coating/", "referenceUrl": "https://www.bangbangautodetailing.com/ceramic-coating/", "hideSelectors": ["iframe", "#map", ".map", ".mapContainer"], "delay": 1500, "misMatchThreshold": 0.05, "requireSameDimensions": false, "selectors": ["document"] },
-    { "label": "boats-detailing", "url": "http://localhost:8080/boats-detailing/", "referenceUrl": "https://www.bangbangautodetailing.com/boats-detailing/", "hideSelectors": ["iframe", "#map", ".map", ".mapContainer"], "delay": 1500, "misMatchThreshold": 0.05, "requireSameDimensions": false, "selectors": ["document"] },
-    { "label": "full-exterior-and-interior-detail", "url": "http://localhost:8080/full-exterior-and-interior-detail/", "referenceUrl": "https://www.bangbangautodetailing.com/full-exterior-and-interior-detail/", "hideSelectors": ["iframe", "#map", ".map", ".mapContainer"], "delay": 1500, "misMatchThreshold": 0.05, "requireSameDimensions": false, "selectors": ["document"] },
-    { "label": "paint-and-trim-restoration", "url": "http://localhost:8080/paint-and-trim-restoration/", "referenceUrl": "https://www.bangbangautodetailing.com/paint-and-trim-restoration/", "hideSelectors": ["iframe", "#map", ".map", ".mapContainer"], "delay": 1500, "misMatchThreshold": 0.05, "requireSameDimensions": false, "selectors": ["document"] },
-    { "label": "rvs-detailing", "url": "http://localhost:8080/rvs-detailing/", "referenceUrl": "https://www.bangbangautodetailing.com/rvs-detailing/", "hideSelectors": ["iframe", "#map", ".map", ".mapContainer"], "delay": 1500, "misMatchThreshold": 0.05, "requireSameDimensions": false, "selectors": ["document"] },
-    { "label": "vinyl-removal", "url": "http://localhost:8080/vinyl-removal/", "referenceUrl": "https://www.bangbangautodetailing.com/vinyl-removal/", "hideSelectors": ["iframe", "#map", ".map", ".mapContainer"], "delay": 1500, "misMatchThreshold": 0.05, "requireSameDimensions": false, "selectors": ["document"] }
+    {
+      "label": "home",
+      "url": "http://localhost:8080/",
+      "referenceUrl": "https://www.bangbangautodetailing.com/",
+      "hideSelectors": [
+        "iframe",
+        "#map",
+        ".map",
+        ".mapContainer"
+      ],
+      "delay": 1500,
+      "misMatchThreshold": 0.05,
+      "requireSameDimensions": false,
+      "selectors": [
+        "document"
+      ]
+    },
+    {
+      "label": "about-us",
+      "url": "http://localhost:8080/about-us/",
+      "referenceUrl": "https://www.bangbangautodetailing.com/about-us/",
+      "hideSelectors": [
+        "iframe",
+        "#map",
+        ".map",
+        ".mapContainer"
+      ],
+      "delay": 1500,
+      "misMatchThreshold": 0.05,
+      "requireSameDimensions": false,
+      "selectors": [
+        "document"
+      ]
+    },
+    {
+      "label": "contact-us",
+      "url": "http://localhost:8080/contact-us/",
+      "referenceUrl": "https://www.bangbangautodetailing.com/contact-us/",
+      "hideSelectors": [
+        "iframe",
+        "#map",
+        ".map",
+        ".mapContainer"
+      ],
+      "delay": 1500,
+      "misMatchThreshold": 0.05,
+      "requireSameDimensions": false,
+      "selectors": [
+        "document"
+      ]
+    },
+    {
+      "label": "see-our-work",
+      "url": "http://localhost:8080/see-our-work/",
+      "referenceUrl": "https://www.bangbangautodetailing.com/see-our-work/",
+      "hideSelectors": [
+        "iframe",
+        "#map",
+        ".map",
+        ".mapContainer"
+      ],
+      "delay": 1500,
+      "misMatchThreshold": 0.05,
+      "requireSameDimensions": false,
+      "selectors": [
+        "document"
+      ]
+    },
+    {
+      "label": "services",
+      "url": "http://localhost:8080/services/",
+      "referenceUrl": "https://www.bangbangautodetailing.com/services/",
+      "hideSelectors": [
+        "iframe",
+        "#map",
+        ".map",
+        ".mapContainer"
+      ],
+      "delay": 1500,
+      "misMatchThreshold": 0.05,
+      "requireSameDimensions": false,
+      "selectors": [
+        "document"
+      ]
+    },
+    {
+      "label": "ceramic-coating",
+      "url": "http://localhost:8080/ceramic-coating/",
+      "referenceUrl": "https://www.bangbangautodetailing.com/ceramic-coating/",
+      "hideSelectors": [
+        "iframe",
+        "#map",
+        ".map",
+        ".mapContainer"
+      ],
+      "delay": 1500,
+      "misMatchThreshold": 0.05,
+      "requireSameDimensions": false,
+      "selectors": [
+        "document"
+      ]
+    },
+    {
+      "label": "boats-detailing",
+      "url": "http://localhost:8080/boats-detailing/",
+      "referenceUrl": "https://www.bangbangautodetailing.com/boats-detailing/",
+      "hideSelectors": [
+        "iframe",
+        "#map",
+        ".map",
+        ".mapContainer"
+      ],
+      "delay": 1500,
+      "misMatchThreshold": 0.05,
+      "requireSameDimensions": false,
+      "selectors": [
+        "document"
+      ]
+    },
+    {
+      "label": "full-exterior-and-interior-detail",
+      "url": "http://localhost:8080/full-exterior-and-interior-detail/",
+      "referenceUrl": "https://www.bangbangautodetailing.com/full-exterior-and-interior-detail/",
+      "hideSelectors": [
+        "iframe",
+        "#map",
+        ".map",
+        ".mapContainer"
+      ],
+      "delay": 1500,
+      "misMatchThreshold": 0.05,
+      "requireSameDimensions": false,
+      "selectors": [
+        "document"
+      ]
+    },
+    {
+      "label": "paint-and-trim-restoration",
+      "url": "http://localhost:8080/paint-and-trim-restoration/",
+      "referenceUrl": "https://www.bangbangautodetailing.com/paint-and-trim-restoration/",
+      "hideSelectors": [
+        "iframe",
+        "#map",
+        ".map",
+        ".mapContainer"
+      ],
+      "delay": 1500,
+      "misMatchThreshold": 0.05,
+      "requireSameDimensions": false,
+      "selectors": [
+        "document"
+      ]
+    },
+    {
+      "label": "rvs-detailing",
+      "url": "http://localhost:8080/rvs-detailing/",
+      "referenceUrl": "https://www.bangbangautodetailing.com/rvs-detailing/",
+      "hideSelectors": [
+        "iframe",
+        "#map",
+        ".map",
+        ".mapContainer"
+      ],
+      "delay": 1500,
+      "misMatchThreshold": 0.05,
+      "requireSameDimensions": false,
+      "selectors": [
+        "document"
+      ]
+    },
+    {
+      "label": "vinyl-removal",
+      "url": "http://localhost:8080/vinyl-removal/",
+      "referenceUrl": "https://www.bangbangautodetailing.com/vinyl-removal/",
+      "hideSelectors": [
+        "iframe",
+        "#map",
+        ".map",
+        ".mapContainer"
+      ],
+      "delay": 1500,
+      "misMatchThreshold": 0.05,
+      "requireSameDimensions": false,
+      "selectors": [
+        "document"
+      ]
+    }
   ],
   "paths": {
     "bitmaps_reference": "tests/backstop/backstop_data/bitmaps_reference",
@@ -28,9 +220,15 @@
     "ci_report": "tests/backstop/backstop_data/ci_report",
     "json_report": "tests/backstop/backstop_data/json_report"
   },
-  "report": ["json"],
+  "report": [
+    "json"
+  ],
   "engine": "puppeteer",
-  "engineOptions": { "args": ["--no-sandbox"] },
+  "engineOptions": {
+    "args": [
+      "--no-sandbox"
+    ]
+  },
   "asyncCaptureLimit": 4,
   "asyncCompareLimit": 20,
   "debug": false,
