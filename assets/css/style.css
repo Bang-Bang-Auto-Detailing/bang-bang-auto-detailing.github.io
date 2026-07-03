@@ -1291,6 +1291,13 @@ p:last-child {
   color: var(--color-pink);
 }
 
+/* Inline body-copy links use text-pink for color; underline them to match
+   production's link treatment without affecting non-link uses of text-pink
+   (e.g. service-tier headings) or nav/buttons/footer links. */
+a.text-pink {
+  text-decoration: underline;
+}
+
 .text-green {
   color: var(--color-green);
 }
