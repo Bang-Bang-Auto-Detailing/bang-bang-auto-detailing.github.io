@@ -12,6 +12,32 @@ cta_heading: "Book Your Ceramic Coating Service Today!"
 cta_body: |
   <p>Your car needs the greatest protection available, and our ceramic coating treatments offer that.</p>
   <p>Get the distinction of expert-level auto detailing by calling Bang Bang Auto Detailing right now. Don't wait; safeguard your investment right now with our expert ceramic coating service.</p>
+faqs:
+  - q: "What is the car ceramic coating cost?"
+    a: >-
+      The size of the vehicle and the degree of protection sought determine
+      the cost of car ceramic coating. For a customized quote, get in touch
+      with us right now!
+  - q: "How long does ceramic coating last?"
+    a: >-
+      Our premium ceramic coatings offer long-term protection and brilliance
+      and should last between 2 to 7+ years, depending on the package
+      selected.
+  - q: "Ceramic coating vs wax: Which is better?"
+    a: >-
+      While ceramic coatings give a thicker, longer-lasting protective layer,
+      wax gives a brief gloss. Ceramic coating is the better option for
+      long-term protection.
+  - q: "Will ceramic coating prevent scratches?"
+    a: >-
+      Ceramic coatings provide a strong protective layer that helps resist
+      minor scratches and swirl marks, but they are not completely
+      scratch-proof.
+  - q: "Does ceramic coating require special maintenance?"
+    a: >-
+      Regular washing with pH-neutral soap is recommended. Avoid automatic
+      car washes with harsh brushes. Our team can provide a maintenance guide
+      upon service completion.
 ---
 
 <section class="section">
@@ -151,36 +177,14 @@ cta_body: |
   <div class="container">
     <h2>FAQs</h2>
     <div class="accordion--green-bars" style="margin-top: var(--space-lg);">
+      {% for item in faqs %}
       <details class="accordion__item">
-        <summary class="accordion__trigger">What is the car ceramic coating cost?</summary>
+        <summary class="accordion__trigger">{{ item.q }}</summary>
         <div class="accordion__content">
-          <p>The size of the vehicle and the degree of protection sought determine the cost of car ceramic coating. For a customized quote, get in touch with us right now!</p>
+          <p>{{ item.a }}</p>
         </div>
       </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">How long does ceramic coating last?</summary>
-        <div class="accordion__content">
-          <p>Our premium ceramic coatings offer long-term protection and brilliance and should last between 2 to 7+ years, depending on the package selected.</p>
-        </div>
-      </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">Ceramic coating vs wax: Which is better?</summary>
-        <div class="accordion__content">
-          <p>While ceramic coatings give a thicker, longer-lasting protective layer, wax gives a brief gloss. Ceramic coating is the better option for long-term protection.</p>
-        </div>
-      </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">Will ceramic coating prevent scratches?</summary>
-        <div class="accordion__content">
-          <p>Ceramic coatings provide a strong protective layer that helps resist minor scratches and swirl marks, but they are not completely scratch-proof.</p>
-        </div>
-      </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">Does ceramic coating require special maintenance?</summary>
-        <div class="accordion__content">
-          <p>Regular washing with pH-neutral soap is recommended. Avoid automatic car washes with harsh brushes. Our team can provide a maintenance guide upon service completion.</p>
-        </div>
-      </details>
+      {% endfor %}
     </div>
   </div>
 </section>

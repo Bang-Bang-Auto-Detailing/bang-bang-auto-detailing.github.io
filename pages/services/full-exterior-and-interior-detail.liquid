@@ -12,6 +12,31 @@ cta_heading: "Book Your Auto Detailing Service Today!"
 cta_body: |
   <p>Professional touch from Bang Bang Auto Detailing will change your car! Whether it's an exterior shine or a thorough inside clean, we provide excellent detailing right to your home.</p>
   <p>Get in touch right now to arrange your visit and see the difference!</p>
+faqs:
+  - q: "How much does a ceramic coating cost with a full detail?"
+    a: >-
+      The cost varies depending on the vehicle size and coating package
+      selected. Contact us for a personalized quote tailored to your
+      vehicle.
+  - q: "Do you offer graphene coating with your detailing packages?"
+    a: >-
+      Yes, we offer <a href="/ceramic-coating/" class="text-pink">graphene
+      ceramic coatings</a> as an upgrade to any of our detailing packages
+      for superior long-term protection.
+  - q: "Can you remove pet hair from my car's interior?"
+    a: >-
+      Absolutely. Our interior detailing process includes specialized pet
+      hair removal techniques to leave your seats and carpets completely
+      clean.
+  - q: "Do you clean carpets and upholstery?"
+    a: >-
+      Yes, our full interior detail includes deep shampooing and hot water
+      extraction for carpets and upholstery to remove stains and odors.
+  - q: "Can you detail my car in a covered garage?"
+    a: >-
+      Yes, our mobile detailing team can work in covered garages, driveways,
+      or parking structures as long as there is adequate space and access to
+      a power outlet.
 ---
 
 <section class="section">
@@ -172,36 +197,14 @@ cta_body: |
   <div class="container">
     <h2>FAQs</h2>
     <div class="accordion--green-bars" style="margin-top: var(--space-lg);">
+      {% for item in faqs %}
       <details class="accordion__item">
-        <summary class="accordion__trigger">How much does a ceramic coating cost with a full detail?</summary>
+        <summary class="accordion__trigger">{{ item.q }}</summary>
         <div class="accordion__content">
-          <p>The cost varies depending on the vehicle size and coating package selected. Contact us for a personalized quote tailored to your vehicle.</p>
+          <p>{{ item.a }}</p>
         </div>
       </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">Do you offer graphene coating with your detailing packages?</summary>
-        <div class="accordion__content">
-          <p>Yes, we offer <a href="/ceramic-coating/" class="text-pink">graphene ceramic coatings</a> as an upgrade to any of our detailing packages for superior long-term protection.</p>
-        </div>
-      </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">Can you remove pet hair from my car's interior?</summary>
-        <div class="accordion__content">
-          <p>Absolutely. Our interior detailing process includes specialized pet hair removal techniques to leave your seats and carpets completely clean.</p>
-        </div>
-      </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">Do you clean carpets and upholstery?</summary>
-        <div class="accordion__content">
-          <p>Yes, our full interior detail includes deep shampooing and hot water extraction for carpets and upholstery to remove stains and odors.</p>
-        </div>
-      </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">Can you detail my car in a covered garage?</summary>
-        <div class="accordion__content">
-          <p>Yes, our mobile detailing team can work in covered garages, driveways, or parking structures as long as there is adequate space and access to a power outlet.</p>
-        </div>
-      </details>
+      {% endfor %}
     </div>
   </div>
 </section>

@@ -12,6 +12,29 @@ cta_heading: "Book Your Vinyl Removal Today!"
 cta_body: |
   <p>Not sure about your old, peeling vinyl? Allow Bang Bang Auto Detailing carefully and precisely to handle your car decal and wrap removal. Our skilled team ensures perfect, damage-free performance so restoring the original look of your car.</p>
   <p>Get in touch right now to experience best expert vinyl removal.</p>
+faqs:
+  - q: "How long does vinyl removal take?"
+    a: >-
+      A full vehicle wrap removal typically takes 4 to 8 hours depending on
+      the size of the vehicle and the condition of the vinyl.
+  - q: "Will vinyl removal damage my paint?"
+    a: >-
+      No, our professional techniques use controlled heat and careful
+      peeling to remove vinyl without damaging your <a
+      href="/paint-and-trim-restoration/" class="text-pink">factory
+      paint</a>.
+  - q: "Can you remove custom graphics and residue?"
+    a: >-
+      Yes, we remove all types of custom graphics, lettering, and decals
+      along with any adhesive residue left behind.
+  - q: "Do you offer mobile vinyl removal service?"
+    a: >-
+      Yes, we offer mobile vinyl removal throughout the Orlando area. We
+      bring all the necessary equipment directly to your location.
+  - q: "How much does vinyl removal cost?"
+    a: >-
+      The cost depends on the size of the vehicle and the amount of vinyl to
+      be removed. Contact us for a free personalized quote.
 ---
 
 <section class="section">
@@ -121,36 +144,14 @@ cta_body: |
   <div class="container">
     <h2>FAQs</h2>
     <div class="accordion--green-bars" style="margin-top: var(--space-lg);">
+      {% for item in faqs %}
       <details class="accordion__item">
-        <summary class="accordion__trigger">How long does vinyl removal take?</summary>
+        <summary class="accordion__trigger">{{ item.q }}</summary>
         <div class="accordion__content">
-          <p>A full vehicle wrap removal typically takes 4 to 8 hours depending on the size of the vehicle and the condition of the vinyl.</p>
+          <p>{{ item.a }}</p>
         </div>
       </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">Will vinyl removal damage my paint?</summary>
-        <div class="accordion__content">
-          <p>No, our professional techniques use controlled heat and careful peeling to remove vinyl without damaging your <a href="/paint-and-trim-restoration/" class="text-pink">factory paint</a>.</p>
-        </div>
-      </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">Can you remove custom graphics and residue?</summary>
-        <div class="accordion__content">
-          <p>Yes, we remove all types of custom graphics, lettering, and decals along with any adhesive residue left behind.</p>
-        </div>
-      </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">Do you offer mobile vinyl removal service?</summary>
-        <div class="accordion__content">
-          <p>Yes, we offer mobile vinyl removal throughout the Orlando area. We bring all the necessary equipment directly to your location.</p>
-        </div>
-      </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">How much does vinyl removal cost?</summary>
-        <div class="accordion__content">
-          <p>The cost depends on the size of the vehicle and the amount of vinyl to be removed. Contact us for a free personalized quote.</p>
-        </div>
-      </details>
+      {% endfor %}
     </div>
   </div>
 </section>

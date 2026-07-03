@@ -12,6 +12,33 @@ cta_heading: "Book Your Paint and Trim Restoration Today!"
 cta_body: |
   <p>Your car deserves the best treatment, and our Paint and Trim Restoration projects deliver just that! Whether your need is for a complete clear coat restoration for your automobile, faded car paint repair, or deep scratch repair for vehicles, we guarantee expert results.</p>
   <p>To schedule your treatment and provide your car the make-over it deserves, contact Bang Bang Auto Detailing now!</p>
+faqs:
+  - q: "How do I know if my car needs paint correction?"
+    a: >-
+      If you notice swirl marks, light scratches, or a dull hazy appearance
+      in direct sunlight, your paint would benefit from professional
+      correction.
+  - q: "Can paint correction fix deep scratches?"
+    a: >-
+      Paint correction can remove or significantly reduce scratches that
+      haven't penetrated through the clear coat. Deep scratches that reach
+      the base coat may require touch-up paint.
+  - q: "What is the best way to protect my paint after correction?"
+    a: >-
+      We recommend applying a <a href="/ceramic-coating/"
+      class="text-pink">ceramic or graphene coating</a> after correction to
+      seal in the results and provide long-lasting protection against
+      future damage.
+  - q: "Can you restore faded plastic and rubber trim?"
+    a: >-
+      Yes, our trim restoration process uses professional-grade products
+      that penetrate and rejuvenate faded plastic and rubber trim back to
+      its original appearance.
+  - q: "How long does paint correction last?"
+    a: >-
+      The correction itself is permanent since it removes defects from the
+      clear coat. When protected with a coating, your paint can stay
+      flawless for 2 to 7+ years.
 ---
 
 <section class="section">
@@ -121,36 +148,14 @@ cta_body: |
   <div class="container">
     <h2>FAQs</h2>
     <div class="accordion--green-bars" style="margin-top: var(--space-lg);">
+      {% for item in faqs %}
       <details class="accordion__item">
-        <summary class="accordion__trigger">How do I know if my car needs paint correction?</summary>
+        <summary class="accordion__trigger">{{ item.q }}</summary>
         <div class="accordion__content">
-          <p>If you notice swirl marks, light scratches, or a dull hazy appearance in direct sunlight, your paint would benefit from professional correction.</p>
+          <p>{{ item.a }}</p>
         </div>
       </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">Can paint correction fix deep scratches?</summary>
-        <div class="accordion__content">
-          <p>Paint correction can remove or significantly reduce scratches that haven't penetrated through the clear coat. Deep scratches that reach the base coat may require touch-up paint.</p>
-        </div>
-      </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">What is the best way to protect my paint after correction?</summary>
-        <div class="accordion__content">
-          <p>We recommend applying a <a href="/ceramic-coating/" class="text-pink">ceramic or graphene coating</a> after correction to seal in the results and provide long-lasting protection against future damage.</p>
-        </div>
-      </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">Can you restore faded plastic and rubber trim?</summary>
-        <div class="accordion__content">
-          <p>Yes, our trim restoration process uses professional-grade products that penetrate and rejuvenate faded plastic and rubber trim back to its original appearance.</p>
-        </div>
-      </details>
-      <details class="accordion__item">
-        <summary class="accordion__trigger">How long does paint correction last?</summary>
-        <div class="accordion__content">
-          <p>The correction itself is permanent since it removes defects from the clear coat. When protected with a coating, your paint can stay flawless for 2 to 7+ years.</p>
-        </div>
-      </details>
+      {% endfor %}
     </div>
   </div>
 </section>

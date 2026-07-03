@@ -21,10 +21,10 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ title }}">
   <meta name="twitter:description" content="{{ description }}">
-  <meta name="twitter:image" content="/assets/img/209-1920w.webp">
+  <meta name="twitter:image" content="https://www.bangbangautodetailing.com/assets/img/209-1920w.webp">
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description }}">
-  <meta property="og:image" content="/assets/img/209-1920w.webp">
+  <meta property="og:image" content="https://www.bangbangautodetailing.com/assets/img/209-1920w.webp">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -36,36 +36,50 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "AutoRepair",
+      "@id": "https://www.bangbangautodetailing.com/#business",
       "name": "Bang Bang Auto Detailing",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2 N Orange Ave",
-        "addressLocality": "Orlando",
-        "addressRegion": "FL",
-        "postalCode": "32801",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "28.54211",
-        "longitude": "-81.379036"
-      },
-      "url": "https://www.bangbangautodetailing.com",
-      "telephone": "{{ phone }}",
+      "url": "https://www.bangbangautodetailing.com/",
+      "telephone": "+14078789967",
       "email": "{{ email }}",
+      "image": "https://www.bangbangautodetailing.com/assets/img/bangbanglogo.png",
       "logo": "https://www.bangbangautodetailing.com/assets/img/bangbanglogo.png",
+      "areaServed": [
+        {% for city in service_area_cities %}
+        { "@type": "Place", "name": {{ city | json }} }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ],
       "openingHoursSpecification": [
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "18:00" }
       ],
-      "priceRange": "$$",
       "sameAs": [
         "https://facebook.com/BangBangdetail",
-        "https://instagram.com/bangbangdetail",
-        "https://youtube.com/@bangbangdetail6958"
+        "https://instagram.com/bangbangdetail/",
+        "https://youtube.com/@bangbangdetail6958",
+        "https://www.google.com/maps/place/Bang+Bang+Auto+Detailing/"
       ]
     }
   </script>
+  {% if faqs %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for item in faqs %}
+        {
+          "@type": "Question",
+          "name": {{ item.q | json }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ item.a | strip_html | json }}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+  </script>
+  {% endif %}
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CN3YZ1T57"></script>
   <script>

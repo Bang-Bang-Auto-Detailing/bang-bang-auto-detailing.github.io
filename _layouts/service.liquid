@@ -2,6 +2,17 @@
 layout: default
 ---
 
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": {{ title | replace: '&amp;', '&' | json }},
+    "description": {{ description | replace: '&amp;', '&' | json }},
+    "provider": { "@id": "https://www.bangbangautodetailing.com/#business" },
+    "areaServed": { "@type": "City", "name": "Orlando, FL" }
+  }
+</script>
+
 <section class="hero section--dark">
   <div class="container text-center">
     <p><span class="pill-green"><img src="/assets/img/search-55w.png" alt="" width="24" height="24"> Bang Bang Auto Detailing</span></p>
