@@ -7,6 +7,7 @@ export default function (eleventyConfig) {
   });
   eleventyConfig.ignores.add('.kiro/**');
   eleventyConfig.ignores.add('CLAUDE.md');
+  eleventyConfig.ignores.add('tests/**');
   eleventyConfig.addGlobalData('site_title', 'Bang Bang Auto Detailing');
   eleventyConfig.addGlobalData('email', 'bangbangautodetailing@gmail.com');
   eleventyConfig.addGlobalData('phone', '(407) 878-9967');
