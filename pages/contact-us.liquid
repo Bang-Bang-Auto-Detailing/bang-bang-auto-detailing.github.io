@@ -56,6 +56,8 @@ uses_map: true
       <div>
         <form action="https://api.web3forms.com/submit" method="post" class="contact-form">
           <input type="hidden" name="access_key" value="{{ form_key }}">
+          <p id="contact-method-help">Please provide an email address or phone number so we can reply.</p>
+          <noscript><p>Email is required when JavaScript is unavailable. You can also call us at <a href="tel:{{ phone }}" class="text-pink">{{ phone }}</a>.</p></noscript>
           <div class="grid grid--2">
             <div class="contact-form__field">
               <label class="contact-form__label" for="contact-name">Name:</label>
@@ -63,12 +65,12 @@ uses_map: true
             </div>
             <div class="contact-form__field">
               <label class="contact-form__label" for="contact-phone">Phone:</label>
-              <input class="contact-form__input" type="tel" name="Phone" id="contact-phone">
+              <input class="contact-form__input" type="tel" name="Phone" id="contact-phone" aria-describedby="contact-method-help">
             </div>
           </div>
           <div class="contact-form__field">
             <label class="contact-form__label" for="contact-email">Email:</label>
-            <input class="contact-form__input" type="email" name="Email" id="contact-email">
+            <input class="contact-form__input" type="email" name="Email" id="contact-email" aria-describedby="contact-method-help" required>
           </div>
           <div class="contact-form__field">
             <label class="contact-form__label" for="contact-message">Message:</label>
@@ -80,3 +82,5 @@ uses_map: true
     </div>
   </div>
 </section>
+
+<script src="/assets/js/contact-form.js" defer></script>
